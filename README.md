@@ -15,5 +15,8 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+- 불환인지불기지 환부지인야(不患人之不己知患不知人也)
+- 남이 나를 알아주지 않음을 근심치 말고, 내가 남을 알지 못함을 근심하라.
+- 공자, <논어 - 학이편>
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fminya8703%2Fminya8703&count_bg=%23448FFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
