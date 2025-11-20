@@ -16,6 +16,14 @@
 이 곳은 제가 배우고, 실험하고, 성장하는 과정을 기록하는 공간입니다.  
 작은 프로젝트부터 실무 학습 내용까지, 하나씩 쌓아가고 있습니다.
 
+### 🔧 Tech Focus
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
 ### 🛠️ Tech Stack
 
 **Main**
@@ -36,9 +44,9 @@
 - 번역한 기술 문서 및 학습 자료
 - 문제 해결 과정 기록
 
-### 📊 GitHub Stats
+### 💻 Most Used Languages
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=minya8703&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=minya8703&layout=compact&theme=radical)
 
 ### 🌟 Philosophy
 
@@ -48,4 +56,3 @@
 ---
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fminya8703%2Fminya8703&count_bg=%23448FFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-
