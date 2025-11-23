@@ -77,8 +77,16 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     letter-spacing: -0.5px;
+}
+
+.job-title-en {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .job-title {
@@ -140,6 +148,68 @@ section {
 .summary-content p {
     margin-bottom: 12px;
     color: #444;
+}
+
+.summary-quote {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF6B35;
+    font-style: italic;
+    margin-bottom: 16px;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFF5F2;
+    border-left: 4px solid #FF6B35;
+    border-radius: 4px;
+}
+
+.current-work,
+.japan-experience {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+}
+
+.current-work h3,
+.japan-experience h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.work-detail {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.work-detail h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.work-detail ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.work-detail li {
+    margin: 6px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.japan-experience ul {
+    padding-left: 20px;
+}
+
+.japan-experience li {
+    margin: 8px 0;
+    color: #444;
+    line-height: 1.6;
 }
 
 /* Timeline Styles */
@@ -295,7 +365,134 @@ section {
 
 .philosophy-box p {
     color: #444;
-    margin: 0;
+    margin: 10px 0;
+}
+
+.philosophy-quote {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF6B35;
+    font-style: italic;
+    text-align: center;
+    margin: 15px 0 !important;
+}
+
+.philosophy-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.philosophy-box h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.philosophy-box ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.philosophy-box li {
+    margin: 8px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.philosophy-values {
+    list-style: none;
+    padding-left: 0;
+}
+
+.philosophy-values li {
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #fff;
+    border-left: 3px solid #FF6B35;
+    border-radius: 4px;
+}
+
+.philosophy-values li strong {
+    color: #FF6B35;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.philosophy-closing {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #E0E0E0;
+}
+
+.philosophy-closing p {
+    margin: 12px 0;
+}
+
+.nested-list {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.nested-list li {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.nested-tech-list {
+    margin-top: 5px;
+    padding-left: 15px;
+    list-style: circle;
+}
+
+.nested-tech-list li {
+    margin: 3px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.company-link {
+    color: #FF6B35;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.company-link:hover {
+    text-decoration: underline;
+}
+
+.work-detail-item {
+    margin-left: 20px;
+}
+
+.work-detail-item .timeline-dot {
+    background-color: #999;
+    width: 10px;
+    height: 10px;
+}
+
+.architecture-diagram {
+    font-family: 'Courier New', monospace;
+    background-color: #F8F8F8;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 8px 0;
+    color: #333;
+    font-size: 13px;
+}
+
+.language-detail {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 4px;
 }
 
 /* Responsive Design */
