@@ -221,7 +221,7 @@ section {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 7px;
+    left: 0px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -236,7 +236,7 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: -23px;
+    left: -6px;
     top: 5px;
     width: 12px;
     height: 12px;
@@ -473,8 +473,8 @@ section {
 
 .work-detail-item .timeline-dot {
     background-color: #999;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
 }
 
 .architecture-diagram {
