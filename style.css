@@ -122,6 +122,17 @@ body {
     margin: 4px 0;
 }
 
+.info-box a {
+    color: #FF6B35;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-box a:hover {
+    color: #E55A2B;
+    text-decoration: underline;
+}
+
 /* Section Styles */
 section {
     margin-bottom: 40px;
@@ -221,11 +232,12 @@ section {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0px;
+    left: -1px;
     top: 0;
     bottom: 0;
     width: 2px;
     background-color: #E0E0E0;
+    z-index: 0;
 }
 
 .timeline-item {
@@ -236,10 +248,10 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: -6px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
+    left: -9px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
     background-color: #FF6B35;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -473,8 +485,8 @@ section {
 
 .work-detail-item .timeline-dot {
     background-color: #999;
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
 }
 
 .architecture-diagram {
