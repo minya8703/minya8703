@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PDF files (개인정보 포함 가능)
+*.pdf
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
