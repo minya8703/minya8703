@@ -232,12 +232,13 @@ section {
 .timeline::before {
     content: '';
     position: absolute;
-    left: -1px;
+    left: 0px;
     top: 0;
     bottom: 0;
     width: 2px;
     background-color: #E0E0E0;
     z-index: 0;
+    transform: translateX(-50%);
 }
 
 .timeline-item {
@@ -248,7 +249,7 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: -9px;
+    left: 0px;
     top: 2px;
     width: 18px;
     height: 18px;
@@ -256,6 +257,8 @@ section {
     border-radius: 50%;
     border: 2px solid #fff;
     z-index: 1;
+    box-sizing: border-box;
+    transform: translateX(-50%);
 }
 
 .timeline-content {
