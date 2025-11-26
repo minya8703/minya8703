@@ -907,6 +907,972 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ============================================ -->
+            <!-- Interview Q&A - 면접 예상 질문 -->
+            <!-- ============================================ -->
+            <section class="full-width">
+                <h2 class="section-title">Interview Q&A - 기술 면접 예상 질문</h2>
+
+                <!-- SOLID 원칙 -->
+                <div class="qa-category">
+                    <h3 class="qa-category-title">📐 SOLID 원칙</h3>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q1. SOLID 원칙에 대해 설명하고, 실제 프로젝트에서 어떻게 적용했나요?</h4>
+                        <div class="answer">
+                            <p><strong>SOLID 원칙 개요:</strong></p>
+                            <ul>
+                                <li><strong>S (Single Responsibility):</strong> 하나의 클래스는 하나의 책임만</li>
+                                <li><strong>O (Open-Closed):</strong> 확장에는 열려있고 수정에는 닫혀있어야 함</li>
+                                <li><strong>L (Liskov Substitution):</strong> 자식 클래스는 부모 클래스를 대체할 수 있어야 함</li>
+                                <li><strong>I (Interface Segregation):</strong> 클라이언트는 사용하지 않는 인터페이스에 의존하지 않아야 함</li>
+                                <li><strong>D (Dependency Inversion):</strong> 추상화에 의존해야지, 구체화에 의존하면 안됨</li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 실제 적용 사례 - MSA 세금계산서 Solution:</strong></p>
+                            <ul>
+                                <li><strong>SRP 적용:</strong> JCo Server(SAP 연동), 중계 Server(데이터 변환), 회계 Server(홈택스 연동)로 책임 분리
+                                    <ul class="nested-list">
+                                        <li>각 서비스가 하나의 명확한 책임만 가지도록 설계</li>
+                                        <li>변경 사항이 다른 서비스에 영향을 주지 않음</li>
+                                    </ul>
+                                </li>
+                                <li><strong>OCP 적용:</strong> REST API 인터페이스로 서비스 간 통신
+                                    <ul class="nested-list">
+                                        <li>새로운 회계 시스템 추가 시 중계 서버 수정 없이 확장 가능</li>
+                                        <li>인터페이스는 고정, 구현체만 추가</li>
+                                    </ul>
+                                </li>
+                                <li><strong>DIP 적용:</strong> Spring의 의존성 주입 활용
+                                    <ul class="nested-list">
+                                        <li>구체적인 구현체가 아닌 인터페이스에 의존</li>
+                                        <li>테스트 시 Mock 객체로 쉽게 대체 가능</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p class="result-highlight"><strong>결과:</strong> 독립 배포 가능, 배포 시간 30분→10분, 유지보수성 향상</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q2. 단일 책임 원칙(SRP)을 위반한 코드를 경험한 적이 있나요? 어떻게 개선했나요?</h4>
+                        <div class="answer">
+                            <p class="project-example"><strong>📌 ANA 항공사 프로젝트 경험:</strong></p>
+                            <ul>
+                                <li><strong>문제 상황:</strong> 한 메서드가 200줄, 티켓 발권/결제/좌석배정/로깅을 모두 처리
+                                    <ul class="nested-list">
+                                        <li>가독성 낮음, 테스트 어려움, 변경 시 전체 영향</li>
+                                    </ul>
+                                </li>
+                                <li><strong>개선 방법:</strong>
+                                    <ul class="nested-list">
+                                        <li>티켓 발권: <code>TicketIssuanceService</code></li>
+                                        <li>결제 처리: <code>PaymentService</code></li>
+                                        <li>좌석 배정: <code>SeatAssignmentService</code></li>
+                                        <li>각 서비스 30줄 이내로 분리</li>
+                                    </ul>
+                                </li>
+                                <li><strong>결과:</strong>
+                                    <ul class="nested-list">
+                                        <li>단위테스트 358개 작성 가능</li>
+                                        <li>커버리지 80% 달성</li>
+                                        <li>진행률 20% → 100% (2개월 내)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 클린 코드 -->
+                <div class="qa-category">
+                    <h3 class="qa-category-title">✨ 클린 코드</h3>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q3. 클린 코드의 핵심 원칙은 무엇이며, 실제로 어떻게 적용했나요?</h4>
+                        <div class="answer">
+                            <p><strong>클린 코드 핵심 원칙:</strong></p>
+                            <ul>
+                                <li><strong>의미 있는 이름:</strong> 변수/메서드명으로 의도를 명확히</li>
+                                <li><strong>작은 함수:</strong> 한 가지 일만, 20-30줄 이내</li>
+                                <li><strong>중복 제거:</strong> DRY(Don't Repeat Yourself) 원칙</li>
+                                <li><strong>테스트 작성:</strong> 안전한 리팩터링의 기반</li>
+                                <li><strong>예외 처리:</strong> 명확한 에러 핸들링</li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 한샘 webMethods EAI 프로젝트:</strong></p>
+                            <ul>
+                                <li><strong>공통 모듈화:</strong>
+                                    <ul class="nested-list">
+                                        <li>50개 인터페이스에서 반복되는 로직 발견</li>
+                                        <li>에러 핸들링, SAP 연결, 데이터 변환 로직을 공통 Flow Service로 분리</li>
+                                        <li>코드 재사용성 향상, 유지보수 시간 단축</li>
+                                    </ul>
+                                </li>
+                                <li><strong>명확한 네이밍:</strong>
+                                    <ul class="nested-list">
+                                        <li><code>connectSAP()</code> → <code>establishSAPConnectionWithRetry()</code></li>
+                                        <li><code>sendData()</code> → <code>transformAndSendToSAPOrderInterface()</code></li>
+                                        <li>메서드명만 봐도 동작을 이해 가능</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 규슈 전력 프로젝트:</strong></p>
+                            <ul>
+                                <li><strong>테스트 커버리지 100% 달성:</strong>
+                                    <ul class="nested-list">
+                                        <li>200개 이상 단위테스트 작성</li>
+                                        <li>바코드 생성 오류 0건 (정밀한 구현과 테스트)</li>
+                                        <li>금융 연동 오류 90% 감소 (Retry 로직)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q4. 레거시 코드를 리팩터링한 경험이 있나요? 어떤 전략을 사용했나요?</h4>
+                        <div class="answer">
+                            <p class="project-example"><strong>📌 ANA 항공사 티켓 발권 시스템:</strong></p>
+                            <ul>
+                                <li><strong>상황:</strong> 진행률 20%, 200줄 메서드, 테스트 없음, 남은 기간 2개월</li>
+                                <li><strong>리팩터링 전략:</strong>
+                                    <ol>
+                                        <li><strong>안전망 구축:</strong> 먼저 기존 기능에 대한 테스트 작성
+                                            <ul class="nested-list">
+                                                <li>회귀 테스트로 리팩터링 중 버그 방지</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>점진적 분리:</strong> 큰 메서드를 작은 메서드로 단계적 분리
+                                            <ul class="nested-list">
+                                                <li>200줄 → 각 30줄 이내로 분리</li>
+                                                <li>각 분리 후 테스트 실행으로 검증</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>중복 제거:</strong> 공통 로직을 별도 클래스/메서드로 추출</li>
+                                        <li><strong>TDD 적용:</strong> 새 기능은 테스트 먼저 작성
+                                            <ul class="nested-list">
+                                                <li>단위테스트 358개 작성</li>
+                                                <li>커버리지 80% 달성</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><strong>결과:</strong> 진행률 20% → 100%, 가독성 향상, 안정성 확보</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DB 최적화 -->
+                <div class="qa-category">
+                    <h3 class="qa-category-title">🗄️ DB 최적화</h3>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q5. DB 성능 최적화를 위해 어떤 방법들을 사용했나요?</h4>
+                        <div class="answer">
+                            <p><strong>DB 최적화 기법:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. 인덱스 설계 및 최적화</h5>
+                                <ul>
+                                    <li><strong>적절한 인덱스 생성:</strong>
+                                        <ul class="nested-list">
+                                            <li>WHERE 절에 자주 사용되는 컬럼에 인덱스</li>
+                                            <li>JOIN 조건 컬럼에 인덱스</li>
+                                            <li>카디널리티가 높은 컬럼 우선</li>
+                                        </ul>
+                                    </li>
+                                    <li class="project-example"><strong>📌 한샘 SAP 연동:</strong>
+                                        <ul class="nested-list">
+                                            <li>주문 조회 쿼리: 고객ID + 주문일자 복합 인덱스 생성</li>
+                                            <li>조회 시간: 5초 → 0.3초 (약 94% 개선)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>2. 쿼리 최적화</h5>
+                                <ul>
+                                    <li><strong>N+1 문제 해결:</strong>
+                                        <ul class="nested-list">
+                                            <li>Lazy Loading → Eager Loading (필요 시)</li>
+                                            <li>JPA Fetch Join 활용</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>SELECT 최적화:</strong>
+                                        <ul class="nested-list">
+                                            <li>SELECT * 대신 필요한 컬럼만 조회</li>
+                                            <li>불필요한 데이터 전송 감소</li>
+                                        </ul>
+                                    </li>
+                                    <li class="project-example"><strong>📌 MSA 세금계산서 프로젝트:</strong>
+                                        <ul class="nested-list">
+                                            <li>세금계산서 조회: JOIN 5개 → 2개로 최적화</li>
+                                            <li>필요한 데이터만 DTO로 projection</li>
+                                            <li>처리 시간: 5분 → 1.5분 (70% 단축)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>3. 배치 처리 최적화</h5>
+                                <ul>
+                                    <li><strong>Bulk Insert/Update:</strong>
+                                        <ul class="nested-list">
+                                            <li>개별 INSERT 대신 배치 INSERT</li>
+                                            <li>JDBC Batch Size 설정 (보통 100~1000)</li>
+                                        </ul>
+                                    </li>
+                                    <li class="project-example"><strong>📌 규슈 전력 청구서 생성:</strong>
+                                        <ul class="nested-list">
+                                            <li>10만 건 청구서 생성 시 Bulk Insert 활용</li>
+                                            <li>처리 시간: 30분 → 5분</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>4. 커넥션 풀 관리</h5>
+                                <ul>
+                                    <li><strong>HikariCP 설정:</strong>
+                                        <ul class="nested-list">
+                                            <li>maximumPoolSize: CPU 코어 수 * 2 + 디스크 수</li>
+                                            <li>minimumIdle: 기본 트래픽에 맞게 설정</li>
+                                            <li>connectionTimeout: 적절한 타임아웃 설정</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>5. 실행 계획 분석</h5>
+                                <ul>
+                                    <li><strong>EXPLAIN 활용:</strong>
+                                        <ul class="nested-list">
+                                            <li>쿼리 실행 계획 분석</li>
+                                            <li>Full Table Scan 발견 시 인덱스 추가</li>
+                                            <li>비효율적인 JOIN 방식 개선</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q6. 인덱스 설계 시 고려사항은 무엇인가요? 과도한 인덱스의 단점은?</h4>
+                        <div class="answer">
+                            <p><strong>인덱스 설계 고려사항:</strong></p>
+                            <ul>
+                                <li><strong>카디널리티:</strong> 고유값이 많을수록 인덱스 효과 ↑
+                                    <ul class="nested-list">
+                                        <li>좋음: 주민등록번호, 이메일, 주문번호</li>
+                                        <li>나쁨: 성별(M/F), Boolean 값</li>
+                                    </ul>
+                                </li>
+                                <li><strong>선택도(Selectivity):</strong> 인덱스로 필터링되는 데이터 비율
+                                    <ul class="nested-list">
+                                        <li>선택도 낮을수록 (결과 적을수록) 효과적</li>
+                                    </ul>
+                                </li>
+                                <li><strong>복합 인덱스 순서:</strong> 카디널리티 높은 컬럼 먼저
+                                    <ul class="nested-list">
+                                        <li>INDEX(고객ID, 주문일자) > INDEX(주문일자, 고객ID)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>WHERE/JOIN 분석:</strong> 자주 사용되는 조건절 우선</li>
+                            </ul>
+
+                            <p><strong>과도한 인덱스의 단점:</strong></p>
+                            <ul>
+                                <li><strong>INSERT/UPDATE/DELETE 성능 저하:</strong>
+                                    <ul class="nested-list">
+                                        <li>데이터 수정 시 모든 인덱스도 업데이트 필요</li>
+                                        <li>인덱스 5개 → INSERT 시간 5배 증가 가능</li>
+                                    </ul>
+                                </li>
+                                <li><strong>저장 공간 증가:</strong> 인덱스도 디스크 공간 차지</li>
+                                <li><strong>옵티마이저 혼란:</strong> 인덱스가 너무 많으면 최적 선택 어려움</li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 실제 경험 - JASSO 프로젝트:</strong></p>
+                            <ul>
+                                <li>학생 테이블에 인덱스 15개 발견 → 8개로 축소</li>
+                                <li>사용되지 않는 인덱스 제거 (MySQL slow query log 분석)</li>
+                                <li>INSERT 성능 40% 향상</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q7. 대용량 데이터 조회 시 성능을 개선하는 방법은?</h4>
+                        <div class="answer">
+                            <p><strong>대용량 데이터 조회 최적화 기법:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. 페이징 처리</h5>
+                                <ul>
+                                    <li><strong>Offset Pagination:</strong>
+                                        <ul class="nested-list">
+                                            <li><code>LIMIT 100 OFFSET 10000</code></li>
+                                            <li>단점: Offset 클수록 느림 (앞 데이터 스캔)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Cursor Pagination (추천):</strong>
+                                        <ul class="nested-list">
+                                            <li><code>WHERE id > last_id LIMIT 100</code></li>
+                                            <li>항상 일정한 성능</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>2. 커버링 인덱스</h5>
+                                <ul>
+                                    <li>인덱스만으로 쿼리 결과 반환 (테이블 접근 불필요)</li>
+                                    <li><code>SELECT id, name FROM users WHERE status='active'</code></li>
+                                    <li>INDEX(status, id, name) 생성 → 커버링 인덱스</li>
+                                </ul>
+
+                                <h5>3. 파티셔닝</h5>
+                                <ul>
+                                    <li><strong>Range 파티셔닝:</strong> 날짜별 (년/월)</li>
+                                    <li><strong>Hash 파티셔닝:</strong> 균등 분산</li>
+                                    <li>효과: 쿼리 시 필요한 파티션만 스캔</li>
+                                </ul>
+
+                                <h5>4. 쿼리 결과 캐싱</h5>
+                                <ul>
+                                    <li><strong>Redis/Memcached:</strong> 자주 조회되는 데이터</li>
+                                    <li><strong>Spring Cache:</strong> @Cacheable 어노테이션</li>
+                                    <li><strong>DB Query Cache:</strong> MySQL Query Cache (5.7 이하)</li>
+                                </ul>
+                            </div>
+
+                            <p class="project-example"><strong>📌 한샘 SAP 주문 조회 시스템:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> 전체 주문 데이터 1,000만 건, 조회 시간 10초</li>
+                                <li><strong>해결:</strong>
+                                    <ul class="nested-list">
+                                        <li>주문일자 기준 월별 파티셔닝</li>
+                                        <li>커버링 인덱스: INDEX(주문일자, 고객ID, 주문번호, 상태)</li>
+                                        <li>Redis 캐싱: 최근 7일 주문 데이터</li>
+                                    </ul>
+                                </li>
+                                <li><strong>결과:</strong> 조회 시간 10초 → 0.5초 (95% 개선)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 데이터 마이그레이션 -->
+                <div class="qa-category">
+                    <h3 class="qa-category-title">🔄 데이터 마이그레이션</h3>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q8. 대용량 데이터 마이그레이션 경험이 있나요? 어떤 전략을 사용했나요?</h4>
+                        <div class="answer">
+                            <p class="project-example"><strong>📌 Credit Saison 프로젝트 - 2,500만 건 마이그레이션:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. 사전 분석 및 계획</h5>
+                                <ul>
+                                    <li><strong>데이터 분석:</strong>
+                                        <ul class="nested-list">
+                                            <li>총 데이터 규모: 2,500만 건</li>
+                                            <li>데이터 타입, 제약조건 파악</li>
+                                            <li>NULL 값, 중복 데이터 분석</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>스키마 매핑:</strong>
+                                        <ul class="nested-list">
+                                            <li>구 시스템 → 신 시스템 컬럼 매핑</li>
+                                            <li>데이터 타입 변환 규칙 정의</li>
+                                            <li>변환 불가능한 데이터 처리 방안</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>롤백 계획:</strong>
+                                        <ul class="nested-list">
+                                            <li>실패 시 구 시스템으로 롤백 절차</li>
+                                            <li>백업 전략 수립</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>2. 마이그레이션 전략</h5>
+                                <ul>
+                                    <li><strong>배치 처리:</strong>
+                                        <ul class="nested-list">
+                                            <li>한번에 10만 건씩 처리</li>
+                                            <li>각 배치 완료 후 커밋</li>
+                                            <li>실패 시 해당 배치만 재시도</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>병렬 처리:</strong>
+                                        <ul class="nested-list">
+                                            <li>데이터를 10개 범위로 분할</li>
+                                            <li>각 범위를 별도 스레드에서 처리</li>
+                                            <li>처리 시간 대폭 단축</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Informatica PowerCenter 활용:</strong>
+                                        <ul class="nested-list">
+                                            <li>ETL 매핑 설계</li>
+                                            <li>데이터 변환 로직 구현</li>
+                                            <li>에러 핸들링 및 로깅</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>3. 데이터 정합성 검증</h5>
+                                <ul>
+                                    <li><strong>건수 검증:</strong>
+                                        <ul class="nested-list">
+                                            <li>원천 데이터 건수 = 목표 데이터 건수</li>
+                                            <li>각 테이블별 건수 비교</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>샘플 데이터 검증:</strong>
+                                        <ul class="nested-list">
+                                            <li>랜덤 샘플 1,000건 추출</li>
+                                            <li>원천 vs 목표 데이터 필드별 비교</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>체크섬 검증:</strong>
+                                        <ul class="nested-list">
+                                            <li>주요 숫자 컬럼 합계 비교</li>
+                                            <li>금액, 수량 등 핵심 데이터</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>4. 성능 최적화</h5>
+                                <ul>
+                                    <li><strong>인덱스 전략:</strong>
+                                        <ul class="nested-list">
+                                            <li>마이그레이션 전: 인덱스 제거 (INSERT 성능 향상)</li>
+                                            <li>마이그레이션 후: 인덱스 재생성</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>제약조건 관리:</strong>
+                                        <ul class="nested-list">
+                                            <li>FK 제약조건 일시 비활성화</li>
+                                            <li>마이그레이션 완료 후 재활성화 및 검증</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>BULK INSERT 활용:</strong>
+                                        <ul class="nested-list">
+                                            <li>개별 INSERT 대신 Bulk 연산</li>
+                                            <li>처리 속도 10배 이상 향상</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>5. 모니터링 및 에러 처리</h5>
+                                <ul>
+                                    <li><strong>진행률 모니터링:</strong> 실시간 진행 상황 대시보드</li>
+                                    <li><strong>에러 로깅:</strong> 실패한 레코드 별도 테이블에 저장</li>
+                                    <li><strong>재시도 로직:</strong> 네트워크 오류 등 일시적 오류 자동 재시도</li>
+                                </ul>
+                            </div>
+
+                            <p><strong>✅ 최종 결과:</strong></p>
+                            <ul>
+                                <li>2,500만 건 무장애 마이그레이션 완료</li>
+                                <li>데이터 정합성 100% 달성</li>
+                                <li>처리 시간: 예상 24시간 → 실제 8시간 (병렬 처리 효과)</li>
+                                <li>비즈니스 중단 시간: 0 (야간 작업 + 롤백 계획)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q9. 무중단 마이그레이션이 필요한 경우 어떻게 진행하나요?</h4>
+                        <div class="answer">
+                            <p><strong>무중단 마이그레이션 전략:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. 이중 쓰기(Dual Write) 방식</h5>
+                                <ul>
+                                    <li><strong>Phase 1:</strong> 구 DB에만 쓰기 (현재 상태)</li>
+                                    <li><strong>Phase 2:</strong> 구 DB + 신 DB 동시 쓰기
+                                        <ul class="nested-list">
+                                            <li>애플리케이션 레벨에서 양쪽 모두 업데이트</li>
+                                            <li>읽기는 여전히 구 DB에서</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Phase 3:</strong> 과거 데이터 백그라운드 마이그레이션</li>
+                                    <li><strong>Phase 4:</strong> 신 DB로 읽기 전환
+                                        <ul class="nested-list">
+                                            <li>데이터 정합성 확인 후</li>
+                                            <li>Feature Toggle로 점진적 전환</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Phase 5:</strong> 구 DB 쓰기 중단, 신 DB만 사용</li>
+                                </ul>
+
+                                <h5>2. CDC(Change Data Capture) 활용</h5>
+                                <ul>
+                                    <li><strong>도구:</strong> Debezium, AWS DMS, Oracle GoldenGate</li>
+                                    <li><strong>방식:</strong>
+                                        <ul class="nested-list">
+                                            <li>구 DB의 변경사항을 실시간 캡처</li>
+                                            <li>신 DB에 자동 반영</li>
+                                            <li>애플리케이션 코드 변경 최소화</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <h5>3. 파란-초록 배포(Blue-Green Deployment)</h5>
+                                <ul>
+                                    <li><strong>Blue:</strong> 현재 운영 중인 구 시스템</li>
+                                    <li><strong>Green:</strong> 신 시스템 (데이터 동기화 완료)</li>
+                                    <li><strong>전환:</strong> 로드밸런서 스위칭으로 즉시 전환</li>
+                                    <li><strong>롤백:</strong> 문제 발생 시 즉시 Blue로 복귀</li>
+                                </ul>
+
+                                <h5>4. 정합성 검증</h5>
+                                <ul>
+                                    <li>이중 쓰기 기간 중 데이터 불일치 감지 시스템</li>
+                                    <li>주기적으로 구/신 DB 데이터 비교</li>
+                                    <li>불일치 발견 시 알림 + 자동 동기화</li>
+                                </ul>
+                            </div>
+
+                            <p class="project-example"><strong>📌 MSA 전환 시 적용:</strong></p>
+                            <ul>
+                                <li>모놀리식 DB → 각 서비스별 독립 DB</li>
+                                <li>이중 쓰기 방식으로 3주간 병행 운영</li>
+                                <li>데이터 정합성 확인 후 신 시스템으로 완전 전환</li>
+                                <li>비즈니스 중단 시간: 0</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DB 설계 및 트랜잭션 -->
+                <div class="qa-category">
+                    <h3 class="qa-category-title">🏗️ DB 설계 & 트랜잭션</h3>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q10. 정규화와 역정규화의 차이는? 언제 역정규화를 사용하나요?</h4>
+                        <div class="answer">
+                            <p><strong>정규화(Normalization):</strong></p>
+                            <ul>
+                                <li><strong>목적:</strong> 데이터 중복 최소화, 무결성 유지</li>
+                                <li><strong>1NF:</strong> 원자성 (각 컬럼은 하나의 값)</li>
+                                <li><strong>2NF:</strong> 부분 함수 종속 제거</li>
+                                <li><strong>3NF:</strong> 이행 함수 종속 제거</li>
+                                <li><strong>장점:</strong> 데이터 일관성, 수정 이상 방지</li>
+                                <li><strong>단점:</strong> JOIN 증가 → 조회 성능 저하</li>
+                            </ul>
+
+                            <p><strong>역정규화(Denormalization):</strong></p>
+                            <ul>
+                                <li><strong>목적:</strong> 조회 성능 향상</li>
+                                <li><strong>방법:</strong> 의도적으로 중복 데이터 허용</li>
+                                <li><strong>장점:</strong> JOIN 감소, 조회 속도 향상</li>
+                                <li><strong>단점:</strong> 데이터 불일치 가능성, 저장 공간 증가</li>
+                            </ul>
+
+                            <p><strong>역정규화 사용 시나리오:</strong></p>
+                            <ul>
+                                <li><strong>읽기가 쓰기보다 압도적으로 많은 경우</strong>
+                                    <ul class="nested-list">
+                                        <li>예: 통계 데이터, 대시보드</li>
+                                    </ul>
+                                </li>
+                                <li><strong>복잡한 JOIN으로 성능 문제 발생</strong>
+                                    <ul class="nested-list">
+                                        <li>5개 이상 테이블 JOIN → 응답시간 5초 이상</li>
+                                    </ul>
+                                </li>
+                                <li><strong>집계 데이터가 자주 필요한 경우</strong>
+                                    <ul class="nested-list">
+                                        <li>예: 주문 총액, 상품 평점 평균</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 한샘 주문 시스템 역정규화 적용:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> 주문 상세 페이지 로딩 5초 (ORDER, ORDER_ITEM, PRODUCT, CUSTOMER 4개 JOIN)</li>
+                                <li><strong>해결:</strong> ORDER 테이블에 총 금액, 고객명, 대표 상품명 컬럼 추가 (역정규화)</li>
+                                <li><strong>동기화:</strong> 주문 생성/수정 시 동기화 로직 추가</li>
+                                <li><strong>결과:</strong> 조회 시간 5초 → 0.5초 (90% 개선)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q11. 트랜잭션 격리 수준(Isolation Level)에 대해 설명해주세요.</h4>
+                        <div class="answer">
+                            <p><strong>트랜잭션 격리 수준 4단계:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. READ UNCOMMITTED (레벨 0)</h5>
+                                <ul>
+                                    <li>커밋되지 않은 데이터도 읽기 가능</li>
+                                    <li><strong>문제:</strong> Dirty Read 발생 가능</li>
+                                    <li><strong>사용:</strong> 거의 사용 안함 (데이터 정합성 보장 불가)</li>
+                                </ul>
+
+                                <h5>2. READ COMMITTED (레벨 1) - 대부분 DBMS 기본값</h5>
+                                <ul>
+                                    <li>커밋된 데이터만 읽기</li>
+                                    <li><strong>해결:</strong> Dirty Read 방지</li>
+                                    <li><strong>문제:</strong> Non-Repeatable Read 발생 가능
+                                        <ul class="nested-list">
+                                            <li>같은 쿼리 두 번 실행 시 다른 결과</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>사용:</strong> Oracle, PostgreSQL 기본값</li>
+                                </ul>
+
+                                <h5>3. REPEATABLE READ (레벨 2) - MySQL InnoDB 기본값</h5>
+                                <ul>
+                                    <li>트랜잭션 시작 시점의 데이터를 일관되게 읽음</li>
+                                    <li><strong>해결:</strong> Non-Repeatable Read 방지</li>
+                                    <li><strong>문제:</strong> Phantom Read 발생 가능 (MySQL은 Next-Key Lock으로 방지)</li>
+                                    <li><strong>사용:</strong> 대부분의 일반적인 케이스</li>
+                                </ul>
+
+                                <h5>4. SERIALIZABLE (레벨 3)</h5>
+                                <ul>
+                                    <li>완전한 격리, 트랜잭션 순차 실행</li>
+                                    <li><strong>해결:</strong> Phantom Read까지 완전 방지</li>
+                                    <li><strong>문제:</strong> 성능 저하, 동시성 매우 낮음</li>
+                                    <li><strong>사용:</strong> 금융 거래 등 정합성이 극도로 중요한 경우</li>
+                                </ul>
+                            </div>
+
+                            <p class="project-example"><strong>📌 MONEX 증권사 프로젝트:</strong></p>
+                            <ul>
+                                <li><strong>상황:</strong> 주식 거래 시스템 (동시 주문 처리)</li>
+                                <li><strong>선택:</strong> REPEATABLE READ
+                                    <ul class="nested-list">
+                                        <li>READ COMMITTED: 주문 처리 중 잔고 변경 → 문제 발생</li>
+                                        <li>SERIALIZABLE: 동시성 너무 낮음 (초당 수천 건 처리 불가)</li>
+                                        <li>REPEATABLE READ: 적절한 격리 + 성능 균형</li>
+                                    </ul>
+                                </li>
+                                <li><strong>추가 대책:</strong> 비관적 락(SELECT FOR UPDATE)으로 잔고 테이블 보호</li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 한샘 재고 관리:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> 동시에 같은 상품 주문 시 재고 부족 문제</li>
+                                <li><strong>해결:</strong> 재고 차감 시 비관적 락 사용
+                                    <ul class="nested-list">
+                                        <li><code>SELECT stock FROM product WHERE id=? FOR UPDATE</code></li>
+                                        <li>재고 확인 → 차감까지 락 유지</li>
+                                    </ul>
+                                </li>
+                                <li><strong>결과:</strong> 재고 부족 오류 0건</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q12. 데드락(Deadlock)이란? 어떻게 해결했나요?</h4>
+                        <div class="answer">
+                            <p><strong>데드락(Deadlock) 개념:</strong></p>
+                            <ul>
+                                <li>두 개 이상의 트랜잭션이 서로의 락을 기다리며 무한 대기하는 상태</li>
+                                <li><strong>예시:</strong>
+                                    <ul class="nested-list">
+                                        <li>트랜잭션 A: 테이블 X 락 → 테이블 Y 대기</li>
+                                        <li>트랜잭션 B: 테이블 Y 락 → 테이블 X 대기</li>
+                                        <li>→ 서로 무한 대기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p><strong>데드락 해결 방법:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. 락 순서 통일</h5>
+                                <ul>
+                                    <li>모든 트랜잭션이 같은 순서로 테이블 접근</li>
+                                    <li>예: 항상 A → B → C 순서로 락 획득</li>
+                                </ul>
+
+                                <h5>2. 트랜잭션 시간 최소화</h5>
+                                <ul>
+                                    <li>불필요한 로직을 트랜잭션 밖으로</li>
+                                    <li>락 유지 시간 단축</li>
+                                </ul>
+
+                                <h5>3. 인덱스 활용</h5>
+                                <ul>
+                                    <li>인덱스 없으면 테이블 전체 락 발생 가능</li>
+                                    <li>WHERE 절 컬럼에 인덱스 → 행 단위 락</li>
+                                </ul>
+
+                                <h5>4. 타임아웃 설정</h5>
+                                <ul>
+                                    <li><code>innodb_lock_wait_timeout</code> (MySQL)</li>
+                                    <li>일정 시간 후 자동 롤백 + 재시도</li>
+                                </ul>
+
+                                <h5>5. 낙관적 락 사용</h5>
+                                <ul>
+                                    <li>Version 컬럼으로 충돌 감지</li>
+                                    <li>충돌 발생 시에만 재시도</li>
+                                </ul>
+                            </div>
+
+                            <p class="project-example"><strong>📌 한샘 주문 처리 시스템 데드락 해결:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> 주문 생성 시 데드락 빈번 (주문+재고+포인트 테이블 동시 수정)</li>
+                                <li><strong>원인 분석:</strong>
+                                    <ul class="nested-list">
+                                        <li>트랜잭션 A: 주문 → 재고 → 포인트 순서</li>
+                                        <li>트랜잭션 B: 포인트 → 재고 → 주문 순서</li>
+                                        <li>→ 데드락 발생</li>
+                                    </ul>
+                                </li>
+                                <li><strong>해결:</strong>
+                                    <ul class="nested-list">
+                                        <li>모든 주문 트랜잭션의 테이블 접근 순서 통일: 주문 → 재고 → 포인트</li>
+                                        <li>재고 조회에 인덱스 추가 (Full Table Scan 방지)</li>
+                                        <li>트랜잭션 시간 단축: 외부 API 호출을 트랜잭션 밖으로</li>
+                                    </ul>
+                                </li>
+                                <li><strong>결과:</strong> 데드락 발생 99% 감소</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q13. N+1 문제란? 어떻게 해결했나요?</h4>
+                        <div class="answer">
+                            <p><strong>N+1 문제 개념:</strong></p>
+                            <ul>
+                                <li>연관된 엔티티를 조회할 때 추가 쿼리가 N번 발생하는 문제</li>
+                                <li><strong>예시:</strong>
+                                    <ul class="nested-list">
+                                        <li>주문 10개 조회 (1번 쿼리)</li>
+                                        <li>각 주문의 상품 조회 (10번 쿼리)</li>
+                                        <li>→ 총 11번 쿼리 (1 + N)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p><strong>해결 방법:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. Fetch Join (JPQL)</h5>
+                                <ul>
+                                    <li><code>SELECT o FROM Order o JOIN FETCH o.items</code></li>
+                                    <li>한번의 쿼리로 연관 데이터까지 조회</li>
+                                    <li><strong>주의:</strong> 페이징 시 문제 발생 가능 (메모리에서 페이징)</li>
+                                </ul>
+
+                                <h5>2. @EntityGraph (JPA)</h5>
+                                <ul>
+                                    <li><code>@EntityGraph(attributePaths = {"items"})</code></li>
+                                    <li>특정 연관관계만 Eager Loading</li>
+                                </ul>
+
+                                <h5>3. Batch Size 설정</h5>
+                                <ul>
+                                    <li><code>@BatchSize(size = 100)</code> (Hibernate)</li>
+                                    <li>N번 쿼리 → N/100번 쿼리 (IN 절 사용)</li>
+                                </ul>
+
+                                <h5>4. DTO Projection</h5>
+                                <ul>
+                                    <li>필요한 데이터만 조회 (엔티티 아님)</li>
+                                    <li>JOIN 쿼리 직접 작성</li>
+                                </ul>
+                            </div>
+
+                            <p class="project-example"><strong>📌 MSA 세금계산서 프로젝트:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> 세금계산서 100건 조회 시 201번 쿼리 (1 + 100 + 100)
+                                    <ul class="nested-list">
+                                        <li>세금계산서 조회 (1번)</li>
+                                        <li>각 세금계산서의 품목 조회 (100번)</li>
+                                        <li>각 품목의 세부정보 조회 (100번)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>해결:</strong>
+                                    <ul class="nested-list">
+                                        <li>Fetch Join 적용: 세금계산서 + 품목 + 세부정보 한번에 조회</li>
+                                        <li>페이징은 ID 범위로 처리</li>
+                                    </ul>
+                                </li>
+                                <li><strong>결과:</strong> 201번 쿼리 → 1번 쿼리, 처리 시간 70% 단축</li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 한샘 주문 조회 시스템:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> 주문 목록 페이지에서 1000건 조회 시 2001번 쿼리</li>
+                                <li><strong>해결:</strong> @BatchSize(size = 100) 설정
+                                    <ul class="nested-list">
+                                        <li>1000번 → 10번 쿼리 (IN 절로 100개씩 조회)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>결과:</strong> 페이지 로딩 시간 8초 → 1.5초</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DB 기타 -->
+                <div class="qa-category">
+                    <h3 class="qa-category-title">💡 DB 기타 중요 개념</h3>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q14. Replication과 Sharding의 차이는? 언제 사용하나요?</h4>
+                        <div class="answer">
+                            <p><strong>Replication (복제):</strong></p>
+                            <ul>
+                                <li><strong>개념:</strong> 같은 데이터를 여러 DB 서버에 복사</li>
+                                <li><strong>Master-Slave 구조:</strong>
+                                    <ul class="nested-list">
+                                        <li>Master: 쓰기 전담 (INSERT, UPDATE, DELETE)</li>
+                                        <li>Slave: 읽기 전담 (SELECT)</li>
+                                        <li>Master → Slave 데이터 동기화</li>
+                                    </ul>
+                                </li>
+                                <li><strong>장점:</strong>
+                                    <ul class="nested-list">
+                                        <li>읽기 성능 향상 (Slave 증설로 확장)</li>
+                                        <li>고가용성 (Master 장애 시 Slave 승격)</li>
+                                        <li>백업 용이</li>
+                                    </ul>
+                                </li>
+                                <li><strong>단점:</strong>
+                                    <ul class="nested-list">
+                                        <li>쓰기는 여전히 Master 한대 (쓰기 확장 불가)</li>
+                                        <li>Replication Lag (마스터-슬레이브 간 지연)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>사용 시나리오:</strong> 읽기가 쓰기보다 훨씬 많은 경우 (10:1 이상)</li>
+                            </ul>
+
+                            <p><strong>Sharding (샤딩):</strong></p>
+                            <ul>
+                                <li><strong>개념:</strong> 데이터를 여러 DB 서버에 분산 저장</li>
+                                <li><strong>분산 방식:</strong>
+                                    <ul class="nested-list">
+                                        <li>Range Sharding: ID 1-1000 → Shard1, 1001-2000 → Shard2</li>
+                                        <li>Hash Sharding: user_id % 4 → Shard 0~3</li>
+                                        <li>Geography Sharding: 지역별 (한국, 일본, 미국)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>장점:</strong>
+                                    <ul class="nested-list">
+                                        <li>쓰기/읽기 모두 확장 가능</li>
+                                        <li>대용량 데이터 처리 (수억 건 이상)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>단점:</strong>
+                                    <ul class="nested-list">
+                                        <li>구현 복잡도 높음</li>
+                                        <li>Shard 간 JOIN 불가능</li>
+                                        <li>Shard 재분배 어려움</li>
+                                    </ul>
+                                </li>
+                                <li><strong>사용 시나리오:</strong> 데이터가 수억 건 이상, 쓰기 트래픽도 많은 경우</li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 실제 경험:</strong></p>
+                            <ul>
+                                <li><strong>한샘 주문 시스템:</strong> Master-Slave Replication 구성
+                                    <ul class="nested-list">
+                                        <li>주문 조회(읽기 90%) → Slave 3대</li>
+                                        <li>주문 생성(쓰기 10%) → Master 1대</li>
+                                        <li>읽기 성능 3배 향상</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Credit Saison (일본 프로젝트):</strong> 데이터 마이그레이션 시 샤딩 고려
+                                    <ul class="nested-list">
+                                        <li>2,500만 건 카드 거래 데이터</li>
+                                        <li>월별 파티셔닝으로 유사 샤딩 효과</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <h4 class="question">Q15. 실행 계획(Explain Plan)을 어떻게 분석하고 개선했나요?</h4>
+                        <div class="answer">
+                            <p><strong>실행 계획 분석 핵심 항목:</strong></p>
+
+                            <div class="optimization-method">
+                                <h5>1. Type (MySQL) / Access Method</h5>
+                                <ul>
+                                    <li><strong>system:</strong> 테이블에 레코드가 1개 (최상)</li>
+                                    <li><strong>const:</strong> PK/UNIQUE로 조회 (매우 좋음)</li>
+                                    <li><strong>eq_ref:</strong> JOIN 시 PK/UNIQUE 사용 (좋음)</li>
+                                    <li><strong>ref:</strong> 일반 인덱스 사용 (양호)</li>
+                                    <li><strong>range:</strong> 인덱스 범위 스캔 (보통)</li>
+                                    <li><strong>index:</strong> 인덱스 풀 스캔 (나쁨)</li>
+                                    <li><strong>ALL:</strong> 테이블 풀 스캔 (최악) → 반드시 개선 필요</li>
+                                </ul>
+
+                                <h5>2. Rows / Cardinality</h5>
+                                <ul>
+                                    <li>예상 스캔 행 수</li>
+                                    <li>높을수록 성능 저하</li>
+                                    <li>인덱스 추가로 rows 감소</li>
+                                </ul>
+
+                                <h5>3. Extra</h5>
+                                <ul>
+                                    <li><strong>Using index:</strong> 커버링 인덱스 (좋음)</li>
+                                    <li><strong>Using where:</strong> WHERE 필터링 (보통)</li>
+                                    <li><strong>Using filesort:</strong> 정렬 시 임시 파일 사용 (나쁨) → 인덱스로 정렬 해결</li>
+                                    <li><strong>Using temporary:</strong> 임시 테이블 생성 (나쁨) → GROUP BY 최적화</li>
+                                </ul>
+                            </div>
+
+                            <p class="project-example"><strong>📌 실제 개선 사례 - 한샘 주문 조회:</strong></p>
+                            <ul>
+                                <li><strong>문제 쿼리:</strong>
+                                    <pre><code>SELECT * FROM orders
+WHERE customer_id = 12345
+  AND order_date BETWEEN '2024-01-01' AND '2024-12-31'
+ORDER BY order_date DESC;</code></pre>
+                                </li>
+                                <li><strong>EXPLAIN 결과 (개선 전):</strong>
+                                    <ul class="nested-list">
+                                        <li>type: ALL (테이블 풀 스캔)</li>
+                                        <li>rows: 1,000,000 (백만 건 스캔)</li>
+                                        <li>Extra: Using filesort (정렬에 임시 파일 사용)</li>
+                                        <li>실행 시간: 8초</li>
+                                    </ul>
+                                </li>
+                                <li><strong>개선 방법:</strong>
+                                    <ul class="nested-list">
+                                        <li>복합 인덱스 생성: INDEX(customer_id, order_date DESC)</li>
+                                        <li>customer_id 먼저 (카디널리티 높음)</li>
+                                        <li>order_date DESC: 정렬 방향까지 인덱스에 포함</li>
+                                    </ul>
+                                </li>
+                                <li><strong>EXPLAIN 결과 (개선 후):</strong>
+                                    <ul class="nested-list">
+                                        <li>type: range (인덱스 범위 스캔)</li>
+                                        <li>rows: 1,200 (필터링된 결과만)</li>
+                                        <li>Extra: Using index (커버링 인덱스, filesort 제거)</li>
+                                        <li>실행 시간: 0.3초 (96% 개선)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p class="project-example"><strong>📌 규슈 전력 청구서 생성 쿼리 최적화:</strong></p>
+                            <ul>
+                                <li><strong>문제:</strong> GROUP BY + SUM 쿼리에서 Using temporary</li>
+                                <li><strong>개선:</strong> GROUP BY 컬럼에 인덱스 추가</li>
+                                <li><strong>결과:</strong> 임시 테이블 생성 제거, 처리 시간 70% 단축</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </main>
     </div>
 </body>
