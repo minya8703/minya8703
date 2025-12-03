@@ -44,13 +44,12 @@
 - 번역한 기술 문서 및 학습 자료
 - 문제 해결 과정 기록
 
-### 📘 Most Used Languages
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=minya8703&layout=compact&theme=radical)](https://github.com/minya8703)
+### 💻 Most Used Languages
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=minya8703&layout=compact&theme=radical)
 
----
+### 🌟 Philosophy
 
-## 🧠 Philosophy
-라온나날 - 즐거운 날들을 보내며, 한 걸음씩 성장하는 개발자가 되고자 합니다.  
+**라온나날** - 즐거운 날들을 보내며, 한 걸음씩 성장하는 개발자가 되고자 합니다.  
 완벽하지 않아도 괜찮습니다. 꾸준히, 즐겁게, 나아가는 것이 중요하니까요.
 
 ---
