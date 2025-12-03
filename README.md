@@ -45,7 +45,7 @@
 - 문제 해결 과정 기록
 
 ### 💻 Most Used Languages
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=minya8703&layout=compact&theme=radical)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=minya8703&layout=compact&theme=radical&cache_seconds=3600)](https://github.com/minya8703)
 
 ### 🌟 Philosophy
 
