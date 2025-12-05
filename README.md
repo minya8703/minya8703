@@ -47,11 +47,6 @@
 ### 💻 Most Used Languages
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=minya8703&layout=compact&theme=radical&cache_seconds=3600)](https://github.com/minya8703)
 
-### 🌟 Philosophy
-
-**라온나날** - 즐거운 날들을 보내며, 한 걸음씩 성장하는 개발자가 되고자 합니다.  
-완벽하지 않아도 괜찮습니다. 꾸준히, 즐겁게, 나아가는 것이 중요하니까요.
-
 ---
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fminya8703%2Fminya8703&count_bg=%23448FFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
