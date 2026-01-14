@@ -56,7 +56,7 @@ EAI 통합 아키텍처를 설계하고 운영하며 흩어져 있던 여러 시
 
 **개인 프로젝트로 작은 도움을**
 
-투자 정보를 한눈에 볼 수 있는 Investment Tracker, 한국으로 돌아온 개발자들을 위한 Korean Dev Terminology Guide를 만들었습니다. 큰 프로젝트는 아니지만 누군가에게는 유용한 도구가 되기를 바라며 만들었습니다.
+투자 정보를 한눈에 볼 수 있는 Investment Tracker, 한국으로 돌아온 개발자들을 위한 Korean Dev Terminology Guide를 만들었습니다. 큰 프로젝트는 아니지만 누군가에게는 유용한 서비스가 되기를 바라며 만들었습니다.
 
 ### 💻 Most Used Languages
 
