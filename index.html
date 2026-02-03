@@ -179,6 +179,16 @@
                                     <i class="fas fa-arrow-right"></i>
                                     <span>통합테스트</span>
                                 </div>
+                                <div class="tasks">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>webMethods Integration Server 기반 EAI 인터페이스 개발</li>
+                                        <li>SAP RFC/BAPI 호출을 통한 ERP 데이터 연동 구현</li>
+                                        <li>각 부서(영업, 물류, 생산, 회계) 시스템 간 실시간 데이터 동기화</li>
+                                        <li>인터페이스 오류 모니터링 및 장애 대응 체계 구축</li>
+                                        <li>신규 인터페이스 요건 분석 및 설계 문서 작성</li>
+                                    </ul>
+                                </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
@@ -213,6 +223,16 @@
                                 </div>
                                 <div class="architecture-diagram">
                                     <code>[SAP JCo Server] ← REST API → [중계 Server] ← REST API → [회계 Solution]</code>
+                                </div>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>기존 모놀리식 구조를 MSA 기반으로 재설계</li>
+                                        <li>SAP JCo Server와 회계 솔루션 간 REST API 중계 서버 개발</li>
+                                        <li>전자세금계산서 발행/취소/수정 API 설계 및 구현</li>
+                                        <li>홈택스 연동 배치 처리 및 이중 발행 방지 로직 개발</li>
+                                        <li>Spring Data JPA 기반 데이터 액세스 레이어 구현</li>
+                                    </ul>
                                 </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
@@ -250,7 +270,7 @@
                         <div class="experience-details">
                             <!-- MONEX MFA -->
                             <div class="exp-project featured">
-                                <h4>MONEX 증권 MFA 인증 시스템 <a href="https://info.monex.co.jp/help/security/sms-auth/operation.html" target="_blank" class="live-link">🟢 운영 중</a></h4>
+                                <h4>MONEX 증권 MFA 인증 시스템 <a href="https://info.monex.co.jp/help/security/sms-auth/operation.html" target="_blank" class="live-link">🟢 운영 중</a> <button class="detail-btn" onclick="openModal('monexModal')"><i class="fas fa-expand-alt"></i> 상세보기</button></h4>
                                 <p class="exp-period">2021.03 ~ 2021.05</p>
                                 <p class="exp-role">SMS/이메일/OTP 기반 다중 인증 시스템 설계 및 개발</p>
                                 <div class="role-flow">
@@ -261,6 +281,16 @@
                                     <span>개발</span>
                                     <i class="fas fa-arrow-right"></i>
                                     <span>통합테스트</span>
+                                </div>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>SMS 인증 시스템 기본설계 및 화면 구현</li>
+                                        <li>SoftBank SMS API 연동 및 인증 코드 발송 로직 개발</li>
+                                        <li>Servlet Filter 패턴으로 기존 레거시 시스템에 인증 레이어 통합</li>
+                                        <li>인증 코드 만료 시간, 재발송, 실패 횟수 제한 로직 구현</li>
+                                        <li>보안팀 요구사항 분석 후 5단계→3단계 인증 플로우 개선안 제안</li>
+                                    </ul>
                                 </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
@@ -286,6 +316,16 @@
                                 <h4>ANA 항공 신 발권 시스템 복구</h4>
                                 <p class="exp-period">2021.01 ~ 2021.02</p>
                                 <p class="exp-role">중단 프로젝트 인수 및 복구</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>전임자 퇴사로 중단된 프로젝트(진행률 20%) 인수</li>
+                                        <li>기존 코드 분석 및 문제점 파악 (200줄+ 메서드, 테스트 부재)</li>
+                                        <li>메서드 분리 및 리팩터링 (평균 200줄 → 30줄)</li>
+                                        <li>JUnit5 기반 단위 테스트 358개 신규 작성</li>
+                                        <li>intra-mart 프레임워크 기반 비즈니스 로직 구현</li>
+                                    </ul>
+                                </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
@@ -309,6 +349,15 @@
                                 <h4>규슈전력 신 영업 시스템 (청구・회수)</h4>
                                 <p class="exp-period">2020.09 ~ 2020.12</p>
                                 <p class="exp-role">전력 요금 청구 및 회수 시스템 개발</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>전력 요금 청구서 발행 및 회수 관리 기능 개발</li>
+                                        <li>바코드 기반 청구서 납부 처리 시스템 구현</li>
+                                        <li>금융기관 연동 인터페이스 개발 및 장애 대응</li>
+                                        <li>JUnit5 기반 단위 테스트 작성 (커버리지 95%+)</li>
+                                    </ul>
+                                </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
@@ -330,6 +379,15 @@
                                 <h4>OA기기 렌탈 시스템 재구축</h4>
                                 <p class="exp-period">2020.03 ~ 2020.08</p>
                                 <p class="exp-role">렌탈 및 리스 시스템 재구축</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>기존 레거시 시스템을 Spring Boot + Vue.js 기반으로 재구축</li>
+                                        <li>렌탈/리스 계약 관리, 기기 재고 관리 기능 개발</li>
+                                        <li>RESTful API 설계 및 백엔드 구현</li>
+                                        <li>Vue.js 기반 프론트엔드 SPA 개발</li>
+                                    </ul>
+                                </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
                                     <span class="tech-tag">Spring Boot</span>
@@ -346,9 +404,19 @@
 
                             <!-- JASSO -->
                             <div class="exp-project featured">
-                                <h4>JASSO 일본 장학금 시스템 리뉴얼</h4>
+                                <h4>JASSO 일본 장학금 시스템 리뉴얼 <button class="detail-btn" onclick="openModal('jassoModal')"><i class="fas fa-expand-alt"></i> 상세보기</button></h4>
                                 <p class="exp-period">2018.01 ~ 2018.12</p>
                                 <p class="exp-role">멀티 디바이스 대응 UI 리뉴얼 (화면 20개)</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>PC 전용 레거시 시스템을 모바일/태블릿 대응 반응형으로 리뉴얼</li>
+                                        <li>장학금 신청 화면 20개 설계 및 프론트엔드 구현</li>
+                                        <li>학교 선택, 보증제도, 계좌정보 입력 등 복잡한 폼 UX 개선</li>
+                                        <li>Appium 기반 iOS/Android 모바일 테스트 자동화 환경 구축</li>
+                                        <li>크로스 브라우저(IE11, Chrome, Safari) 호환성 대응</li>
+                                    </ul>
+                                </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
@@ -370,6 +438,14 @@
                                 <h4>정유 기업 신시스템 구축</h4>
                                 <p class="exp-period">2017.08 ~ 2017.12</p>
                                 <p class="exp-role">마스터 관리 시스템 설계/개발</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>정유 관련 마스터 데이터(제품, 거래처, 가격) 관리 시스템 설계</li>
+                                        <li>마스터 데이터 CRUD 화면 및 API 개발</li>
+                                        <li>데이터 유효성 검증 및 이력 관리 기능 구현</li>
+                                    </ul>
+                                </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
                                     <span class="tech-tag">JavaScript</span>
@@ -382,6 +458,14 @@
                                 <h4>차기 신용카드 시스템 데이터 이관</h4>
                                 <p class="exp-period">2017.04 ~ 2017.07</p>
                                 <p class="exp-role">CARD 결제 관련 데이터 이관 설계</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>기존 카드 결제 시스템에서 신규 시스템으로 데이터 이관 설계</li>
+                                        <li>Systemwalker 기반 배치 Job 스케줄링 및 모니터링</li>
+                                        <li>데이터 정합성 검증 로직 설계</li>
+                                    </ul>
+                                </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
                                     <span class="tech-tag">Systemwalker</span>
@@ -409,6 +493,15 @@
                                 <h4>신일본제철 운송관리 시스템</h4>
                                 <p class="exp-period">2015.01 ~ 2015.09</p>
                                 <p class="exp-role">합병 대응 수송비 계산 시스템</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>제철소 간 합병에 따른 운송비 계산 로직 통합</li>
+                                        <li>수송 경로별 비용 산정 및 정산 기능 개발</li>
+                                        <li>Struts2 기반 웹 화면 및 비즈니스 로직 구현</li>
+                                        <li>Oracle 기반 복잡한 비용 계산 쿼리 최적화</li>
+                                    </ul>
+                                </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
                                     <span class="tech-tag">JSP</span>
@@ -422,6 +515,15 @@
                                 <h4>Credit Saison 데이터 통합 (2차 재투입)</h4>
                                 <p class="exp-period">2014.04 ~ 2014.09</p>
                                 <p class="exp-role">신용카드 사용자 약 2,500만 명 데이터 마이그레이션</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>1차 프로젝트 성과를 인정받아 핵심 인력으로 재투입</li>
+                                        <li>Informatica PowerCenter 기반 ETL 매핑 및 변환 로직 개발</li>
+                                        <li>Oracle → Teradata 간 대용량 데이터 마이그레이션 수행</li>
+                                        <li>데이터 정합성 검증 및 오류 데이터 보정 처리</li>
+                                    </ul>
+                                </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
@@ -443,6 +545,15 @@
                                 <h4>사내 업무 경력서 Web 관리 시스템</h4>
                                 <p class="exp-period">2014.01 ~ 2014.03</p>
                                 <p class="exp-role">환경 구축부터 기본 설계까지</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>개발 환경(서버, DB, 형상관리) 구축 및 설정</li>
+                                        <li>직원 경력 관리 시스템 요건 분석 및 기본 설계</li>
+                                        <li>Struts2 + Hibernate 기반 아키텍처 설계</li>
+                                        <li>DB 스키마 설계 및 초기 데이터 구축</li>
+                                    </ul>
+                                </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
                                     <span class="tech-tag">JSP</span>
@@ -456,6 +567,14 @@
                                 <h4>MUFG 금융기관 데이터 통합</h4>
                                 <p class="exp-period">2013.10 ~ 2013.12</p>
                                 <p class="exp-role">PL/SQL 기반 마이그레이션</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>금융기관 간 합병에 따른 데이터 통합 마이그레이션</li>
+                                        <li>PL/SQL 기반 대용량 데이터 변환 프로시저 개발</li>
+                                        <li>데이터 매핑 규칙 정의 및 검증 로직 구현</li>
+                                    </ul>
+                                </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">PL/SQL</span>
                                     <span class="tech-tag">Oracle</span>
@@ -467,6 +586,15 @@
                                 <h4>Credit Saison 데이터 통합 (1차)</h4>
                                 <p class="exp-period">2013.04 ~ 2013.09</p>
                                 <p class="exp-role">신용카드 사용자 약 2,500만 명 데이터 마이그레이션</p>
+                                <div class="duties">
+                                    <h5><i class="fas fa-clipboard-list"></i> 수행 업무</h5>
+                                    <ul>
+                                        <li>일본 최대 신용카드사 회원 데이터 마이그레이션 프로젝트 참여</li>
+                                        <li>연체자 분류 로직 설계 및 Informatica ETL 매핑 개발</li>
+                                        <li>Oracle → Teradata 간 데이터 변환 및 정합성 검증</li>
+                                        <li>마이그레이션 테스트 및 장애 대응</li>
+                                    </ul>
+                                </div>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
@@ -810,7 +938,7 @@
                     <div class="contact-icon-h"><i class="fas fa-phone"></i></div>
                     <div class="contact-text-h">
                         <h4>PHONE</h4>
-                        <p>010-****-****</p>
+                        <p>010-****-0780</p>
                     </div>
                 </div>
                 <div class="contact-card-h">
@@ -837,6 +965,265 @@
             </div>
         </div>
     </section>
+
+    <!-- JASSO Project Modal -->
+    <div class="modal-overlay" id="jassoModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-university"></i> JASSO 일본 장학금 시스템 리뉴얼</h3>
+                <button class="modal-close" onclick="closeModal('jassoModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <!-- 개요 -->
+                <div class="modal-overview">
+                    <div class="overview-item">
+                        <span class="overview-label">기간</span>
+                        <span class="overview-value">2018.01 ~ 2018.12</span>
+                    </div>
+                    <div class="overview-item">
+                        <span class="overview-label">개발 형태</span>
+                        <span class="overview-value">멀티 디바이스 대응 UI 리뉴얼</span>
+                    </div>
+                    <div class="overview-item">
+                        <span class="overview-label">개발 범위</span>
+                        <span class="overview-value">설계 / 백엔드 / 프론트엔드 / 유닛테스트 / 통합테스트</span>
+                    </div>
+                </div>
+
+                <!-- 수행 업무 -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-tasks"></i> 수행 업무</h4>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-number">1</div>
+                            <div class="task-content">
+                                <h5>학교신청 선택화면</h5>
+                                <span class="task-role">설계 / 프론트엔드</span>
+                                <p class="task-desc">장학금 신청 시 학교 검색 및 선택 UI 설계. 학교명 자동완성, 학과 선택 연동, 모바일 터치 최적화 구현. 기존 PC 전용 화면을 반응형으로 전환.</p>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">2</div>
+                            <div class="task-content">
+                                <h5>H-보증제도 선택 화면</h5>
+                                <span class="task-role">설계 / 프론트엔드</span>
+                                <p class="task-desc">보증인 제도(인적보증/기관보증) 선택 플로우 설계. 각 제도별 필요 서류 안내, 조건 분기 처리. 복잡한 선택지를 단계별 위자드 형태로 UX 개선.</p>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">3</div>
+                            <div class="task-content">
+                                <h5>'K-특기정보'·'L-가정사정정보'·'긴급·응급채용정보' 입력 화면</h5>
+                                <span class="task-role">설계 / 프론트엔드</span>
+                                <p class="task-desc">다수의 입력 필드가 있는 복잡한 폼을 모바일에서도 사용하기 쉽게 개선. 입력 검증 실시간 피드백, 임시저장 기능, 이전 단계 데이터 유지 처리.</p>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">4</div>
+                            <div class="task-content">
+                                <h5>M-장학금 입금 계좌 정보</h5>
+                                <span class="task-role">설계 / 프론트엔드</span>
+                                <p class="task-desc">은행 선택과 우체국은행 선택 시 입력 폼이 다른 분기 처리 구현. 계좌번호 형식 검증, 확인 화면에서 마스킹 처리. 입력 오류 시 친절한 에러 메시지 제공.</p>
+                                <div class="sub-tasks">
+                                    <span>은행 선택 케이스</span>
+                                    <span>우체국은행 선택 케이스</span>
+                                    <span>계좌 정보 확인 화면</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">+</div>
+                            <div class="task-content">
+                                <h5>모바일 페이지 및 기타 다수 페이지</h5>
+                                <span class="task-role">총 20개 화면 구현</span>
+                                <p class="task-desc">Appium 기반 모바일 테스트 자동화 환경 구축. iOS/Android 실기기 테스트 스크립트 작성으로 수동 테스트 대비 200% 효율 개선. 크로스 브라우저(IE11, Chrome, Safari) 호환성 확보.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 주요 성과 -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-chart-line"></i> 주요 성과</h4>
+                    <div class="result-cards">
+                        <div class="result-card">
+                            <div class="result-value">170%</div>
+                            <div class="result-label">사용자 접속 증가</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value">200%</div>
+                            <div class="result-label">테스트 시간 개선</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value">20+</div>
+                            <div class="result-label">화면 구현</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-code"></i> Skill</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JSP</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">반응형 웹</span>
+                        <span class="tech-tag">Appium</span>
+                        <span class="tech-tag">모바일 테스트 자동화</span>
+                    </div>
+                </div>
+
+                <!-- 참고 링크 -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-link"></i> 참고</h4>
+                    <div class="reference-links">
+                        <a href="https://www.notion.so/difud1106/ed4c7a321d2d4a26973016346b7cdda8" target="_blank" class="ref-link">
+                            <i class="fas fa-external-link-alt"></i> 상세 포트폴리오 (Notion)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MONEX Project Modal -->
+    <div class="modal-overlay" id="monexModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-shield-alt"></i> MONEX 증권 MFA 인증 시스템</h3>
+                <button class="modal-close" onclick="closeModal('monexModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <!-- 개요 -->
+                <div class="modal-overview">
+                    <div class="overview-item">
+                        <span class="overview-label">기간</span>
+                        <span class="overview-value">2021.03 ~ 2021.05</span>
+                    </div>
+                    <div class="overview-item">
+                        <span class="overview-label">개발 형태</span>
+                        <span class="overview-value">기능 추가 (MFA 인증 시스템)</span>
+                    </div>
+                    <div class="overview-item">
+                        <span class="overview-label">개발 범위</span>
+                        <span class="overview-value">고객 사이트 + 관리자 사이트 (설계/백엔드/프론트엔드)</span>
+                    </div>
+                    <div class="overview-item status-live">
+                        <span class="overview-label">운영 상태</span>
+                        <span class="overview-value">🟢 현재 운영 중 (2021~)</span>
+                    </div>
+                </div>
+
+                <!-- 수행 업무 -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-tasks"></i> 수행 업무</h4>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-number">1</div>
+                            <div class="task-content">
+                                <h5>회원 정보 페이지</h5>
+                                <span class="task-role">설계 / 백엔드 / 프론트엔드</span>
+                                <p class="task-desc">MFA 기능 추가에 따른 회원 정보 화면 설계 및 수정. 기존 회원 정보 테이블에 SMS 인증 여부, 휴대폰 번호 등 신규 컬럼 추가 및 화면 연동.</p>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">2</div>
+                            <div class="task-content">
+                                <h5>이중 요소 인증 (2FA) / SMS 인증 페이지</h5>
+                                <span class="task-role">설계 / 백엔드 / 프론트엔드</span>
+                                <p class="task-desc">SoftBank SMS API 연동을 통한 인증 코드 발송 기능 구현. 6자리 인증 코드 생성, 3분 만료 시간 관리, 5회 실패 시 계정 잠금 로직 설계. 재발송 시 기존 코드 무효화 처리.</p>
+                                <div class="sub-tasks">
+                                    <span>인증 코드 발송</span>
+                                    <span>재발송 로직</span>
+                                    <span>만료 시간 관리</span>
+                                    <span>실패 횟수 제한</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">3</div>
+                            <div class="task-content">
+                                <h5>휴대폰 인증 페이지</h5>
+                                <span class="task-role">설계</span>
+                                <p class="task-desc">휴대폰 기기 고유 정보를 활용한 인증 플로우 설계. 신규 기기 등록, 기기 변경, 분실 시 복구 프로세스 포함.</p>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">4</div>
+                            <div class="task-content">
+                                <h5>Servlet Filter 기반 인증 통합</h5>
+                                <span class="task-role">설계 / 백엔드</span>
+                                <p class="task-desc">기존 레거시 시스템(10년+ 운영)에 영향 없이 인증 레이어 추가. Filter Chain 패턴으로 로그인 후 MFA 검증 단계 삽입. 세션 기반 인증 상태 관리.</p>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-number">★</div>
+                            <div class="task-content">
+                                <h5>인증 플로우 개선안 제안</h5>
+                                <span class="task-role">제안 및 채택</span>
+                                <p class="task-desc">보안팀 초기 요구사항은 5단계 인증 플로우였으나, 사용자 이탈률 우려 및 UX 관점에서 3단계로 간소화하는 대안을 직접 제안. 보안성은 유지하면서 사용성을 개선한 안이 최종 채택됨.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 주요 성과 -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-chart-line"></i> 주요 성과</h4>
+                    <div class="result-cards">
+                        <div class="result-card">
+                            <div class="result-value">99.2%</div>
+                            <div class="result-label">SMS 발송 성공률</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value">30%</div>
+                            <div class="result-label">부정 로그인 감소</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value">0건</div>
+                            <div class="result-label">서비스 장애</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value">5→3</div>
+                            <div class="result-label">인증 단계 개선</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-code"></i> Skill</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java 8</span>
+                        <span class="tech-tag">Servlet Filter</span>
+                        <span class="tech-tag">SoftBank SMS API</span>
+                        <span class="tech-tag">MyBatis</span>
+                        <span class="tech-tag">Oracle</span>
+                        <span class="tech-tag">JSP</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- 운영 페이지 링크 -->
+                <div class="modal-section">
+                    <h4><i class="fas fa-globe"></i> 운영 페이지</h4>
+                    <div class="reference-links">
+                        <a href="https://info.monex.co.jp/help/security/sms-auth/apply.html" target="_blank" class="ref-link">
+                            <i class="fas fa-mobile-alt"></i> SMS 인증 시스템 안내
+                        </a>
+                        <a href="https://info.monex.co.jp/help/security/mobile-auth/operation.html" target="_blank" class="ref-link">
+                            <i class="fas fa-phone"></i> 휴대폰 인증 시스템 안내
+                        </a>
+                        <a href="https://www.notion.so/difud1106/5c95b79a6af844d89a6ad8ba1fe59cac" target="_blank" class="ref-link">
+                            <i class="fas fa-external-link-alt"></i> 상세 포트폴리오 (Notion)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
