@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>민야령 | Software Engineer Portfolio</title>
+    <title>민야령 | Backend Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -18,6 +18,7 @@
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#education" class="nav-link">Education</a>
+                <a href="#philosophy" class="nav-link">Philosophy</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -35,8 +36,8 @@
                 <span class="hero-subtitle">Hello, I'm</span>
                 <h1 class="hero-title">민야령</h1>
                 <p class="hero-name-en">Min YaRyung</p>
-                <h2 class="hero-role">Software Engineer</h2>
-                <p class="hero-tagline">"개발은 연결이다 - 시스템·사람·데이터를 잇는 기술자"</p>
+                <h2 class="hero-role">Backend Developer · System Integration Specialist</h2>
+                <p class="hero-tagline">"2,500만 사용자 데이터를 다뤄본 인증 시스템 설계 전문 백엔드 개발자"</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Contact Me</a>
                     <a href="#experience" class="btn btn-secondary">View Experience</a>
@@ -63,68 +64,78 @@
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-text">About Me</span>
-                <span class="title-line"></span>
-            </h2>
+            <span class="section-badge">About Me</span>
+            <h2 class="section-title-main">문제 상황에서 더 나은 방법을 제안하는 개발자</h2>
+            <p class="section-desc">대용량 사용자 서비스와 인증 시스템을 설계하고 개발한 경험이 있습니다</p>
 
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-code"></i>
+            <div class="about-wrapper">
+                <div class="about-text-area">
+                    <h3 class="about-heading">대용량 데이터와 <span class="text-primary">인증 시스템</span> 전문가</h3>
+                    
+                    <p class="about-paragraph">
+                        일본 최대 신용카드사 <strong>Credit Saison</strong>에서 <span class="text-primary">2,500만 명</span>의 회원 데이터 마이그레이션을 정합성 이슈 없이 완료했습니다. 대규모 사용자 데이터의 무게와 책임을 압니다.
+                    </p>
+                    
+                    <p class="about-paragraph">
+                        <strong>MONEX 증권</strong>에서 SMS/이메일/OTP 기반의 <span class="text-primary">다중 인증(MFA) 시스템</span>을 기본설계부터 개발까지 담당했습니다. 보안팀의 5단계 요구사항을 <span class="text-primary">3단계로 개선</span>하는 안을 직접 제안하여 채택시켰고, 이 서비스는 현재도 운영 중입니다.
+                    </p>
+                    
+                    <p class="about-paragraph">
+                        SAP ERP와 레거시 시스템을 연결하는 <strong>50개 이상의 인터페이스</strong>를 개발하고 운영하며, 대규모 시스템 간 연동의 복잡성을 해결해왔습니다.
+                    </p>
+
+                    <div class="about-cta-box">
+                        <p><strong>이제 한 곳에서 깊이 있게 기여하고 싶습니다.</strong></p>
                     </div>
-                    <h3>12+ Years Experience</h3>
-                    <p>일본 10년 + 한국 2년의 실무 경험으로 다양한 산업의 미션 크리티컬 시스템을 구축했습니다.</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-project-diagram"></i>
+
+                <div class="about-stats-area">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-value">2,500<span class="stat-unit">만+</span></div>
+                        <div class="stat-label">사용자 데이터 처리 경험</div>
                     </div>
-                    <h3>System Integration</h3>
-                    <p>SAP, webMethods EAI 기반 50개 이상의 인터페이스를 설계하고 구현했습니다.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-check-double"></i>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-plug"></i></div>
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">시스템 인터페이스 개발</div>
                     </div>
-                    <h3>Quality First</h3>
-                    <p>테스트 커버리지 80~100% 달성, 단위테스트 500개 이상 작성으로 품질을 증명합니다.</p>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-industry"></i></div>
+                        <div class="stat-value">8<span class="stat-unit">개</span></div>
+                        <div class="stat-label">산업 도메인 경험</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="about-summary">
-                <div class="summary-box">
-                    <h3>Professional Summary</h3>
-                    <p>일본에서 10년간 폭포수 방식의 SDLC를 경험하며 요구사항 분석부터 기본설계, 상세설계, 구현, 통합 테스트, 운영 및 장애 대응까지 엔드투엔드 개발 프로세스를 수행했습니다.</p>
-                    <p>금융권과 항공사의 미션 크리티컬 시스템에서 안정성과 품질 중심의 개발 방법론을 체득했습니다.</p>
-                    <p>귀국 후에는 ERP 회계 모듈 구축을 위해 SAP ABAP를 습득했고, RFC 통신과 IDoc 인터페이스를 활용해 이기종 시스템 간 50개 이상의 연동 포인트를 설계하고 구현했습니다.</p>
-                </div>
-            </div>
-
-            <!-- Current Work Highlights -->
-            <div class="highlight-grid">
-                <div class="highlight-card">
-                    <div class="highlight-header">
-                        <i class="fas fa-building"></i>
-                        <h4>현재 | NARINER (2023.06 ~ 현재)</h4>
+            <!-- Core Strengths -->
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <div class="strength-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="strength-content">
+                        <h4>인증 시스템 설계</h4>
+                        <p>MFA 시스템 설계~개발, SMS 99.2%</p>
                     </div>
-                    <div class="highlight-body">
-                        <div class="highlight-item">
-                            <h5><i class="fas fa-briefcase"></i> 한샘 현장 파견</h5>
-                            <ul>
-                                <li>webMethods EAI 기반 SAP 연동 인터페이스 50개 개발·테스트</li>
-                                <li>RFC/BAPI 호출 기반 각 부서 간 데이터 실시간 연동 구축</li>
-                                <li>선제적 모니터링으로 안정적 운영, 장애 발생률 감소</li>
-                            </ul>
-                        </div>
-                        <div class="highlight-item">
-                            <h5><i class="fas fa-server"></i> NARINER 본사</h5>
-                            <ul>
-                                <li>MSA 아키텍처 기반 전자세금계산서 솔루션 개발</li>
-                                <li>API 응답 시간 70% 단축 (5분 → 1.5분/건)</li>
-                                <li>SAP-홈택스 실시간 연동, 이중 발행 오류 0건</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-icon"><i class="fas fa-database"></i></div>
+                    <div class="strength-content">
+                        <h4>대용량 데이터 처리</h4>
+                        <p>2,500만 명 마이그레이션, 정합성 0</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-icon"><i class="fas fa-link"></i></div>
+                    <div class="strength-content">
+                        <h4>시스템 연동 전문</h4>
+                        <p>SAP/EAI 인터페이스 50개+</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-icon"><i class="fas fa-vial"></i></div>
+                    <div class="strength-content">
+                        <h4>테스트 주도 개발</h4>
+                        <p>커버리지 80~95%, 500개+ 작성</p>
                     </div>
                 </div>
             </div>
@@ -156,6 +167,7 @@
                         <span class="timeline-position">Enterprise Integration Full-stack Developer</span>
 
                         <div class="experience-details">
+                            <!-- 한샘 현장 -->
                             <div class="exp-project">
                                 <h4>(주)한샘 현장</h4>
                                 <p class="exp-period">2023.06 ~ 현재</p>
@@ -185,6 +197,7 @@
                                 </div>
                             </div>
 
+                            <!-- NARINER 본사 -->
                             <div class="exp-project">
                                 <h4>NARINER 본사</h4>
                                 <p class="exp-period">2024.02 ~ 현재</p>
@@ -198,7 +211,7 @@
                                     <i class="fas fa-arrow-right"></i>
                                     <span>통합테스트</span>
                                 </div>
-                                <div class="architecture-box">
+                                <div class="architecture-diagram">
                                     <code>[SAP JCo Server] ← REST API → [중계 Server] ← REST API → [회계 Solution]</code>
                                 </div>
                                 <div class="achievements">
@@ -230,19 +243,16 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>스마트아이엔지 (スマートアイエンジー株式会社)</h3>
-                            <a href="https://www.smarting.jp" target="_blank" class="company-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
                         <span class="timeline-date">2017.04 ~ 2021.05</span>
-                        <span class="timeline-position">Full-stack Developer</span>
+                        <span class="timeline-position">Full-stack Developer (주임)</span>
 
                         <div class="experience-details">
-                            <!-- MONEX -->
-                            <div class="exp-project">
-                                <h4>MONEX, Inc.</h4>
+                            <!-- MONEX MFA -->
+                            <div class="exp-project featured">
+                                <h4>MONEX 증권 MFA 인증 시스템 <a href="https://info.monex.co.jp/help/security/sms-auth/operation.html" target="_blank" class="live-link">🟢 운영 중</a></h4>
                                 <p class="exp-period">2021.03 ~ 2021.05</p>
-                                <p class="exp-role">증권사 다중요소 인증(MFA) 시스템 도입</p>
+                                <p class="exp-role">SMS/이메일/OTP 기반 다중 인증 시스템 설계 및 개발</p>
                                 <div class="role-flow">
                                     <span>요구사항 분석</span>
                                     <i class="fas fa-arrow-right"></i>
@@ -255,86 +265,96 @@
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
-                                        <li>Servlet Filter 패턴으로 기존 코드 영향 최소화</li>
-                                        <li>시스템 도입 후 장애 0건 (2개월)</li>
-                                        <li>부정 로그인 시도 약 30% 감소</li>
-                                        <li>SMS 발송 성공률 99.2% 달성</li>
+                                        <li>SMS 발송 성공률 <strong>99.2%</strong> 달성</li>
+                                        <li>부정 로그인 및 비정상 출금 시도 <strong>30% 감소</strong></li>
+                                        <li>서비스 장애 <strong>0건</strong> (운영 이관 후)</li>
+                                        <li><strong>5단계 → 3단계</strong> 인증 플로우 개선안 직접 제안 및 채택</li>
+                                        <li>Servlet Filter 패턴으로 기존 시스템에 안정적 통합</li>
                                     </ul>
                                 </div>
                                 <div class="tech-tags">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">Servlet</span>
+                                    <span class="tech-tag">Java 8</span>
+                                    <span class="tech-tag">Servlet Filter</span>
+                                    <span class="tech-tag">SoftBank API</span>
                                     <span class="tech-tag">MyBatis</span>
-                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Oracle</span>
                                 </div>
                             </div>
 
-                            <!-- ANA -->
-                            <div class="exp-project">
-                                <h4>전일본공수(ANA)</h4>
+                            <!-- ANA 항공 -->
+                            <div class="exp-project featured">
+                                <h4>ANA 항공 신 발권 시스템 복구</h4>
                                 <p class="exp-period">2021.01 ~ 2021.02</p>
-                                <p class="exp-role">항공사 티켓 발권 시스템 개발</p>
+                                <p class="exp-role">중단 프로젝트 인수 및 복구</p>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
-                                        <li>진행률 20% → 100% 완료 (2개월)</li>
-                                        <li>메서드 평균 길이 200줄 → 30줄, 가독성 향상</li>
-                                        <li>단위테스트 358개, 커버리지 80% 달성</li>
+                                        <li>진행률 <strong>20% → 100%</strong> (2개월 만에 완료)</li>
+                                        <li>단위 테스트 <strong>358개</strong> 작성</li>
+                                        <li>테스트 커버리지 <strong>80%+</strong> 달성</li>
+                                        <li>메서드 평균 길이 200줄 → 30줄 리팩터링</li>
                                     </ul>
                                 </div>
                                 <div class="tech-tags">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">im-JavaEE</span>
+                                    <span class="tech-tag">Java 8</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">intra-mart</span>
                                     <span class="tech-tag">JUnit5</span>
                                     <span class="tech-tag">Oracle</span>
                                 </div>
                             </div>
 
-                            <!-- 규슈 전력 -->
+                            <!-- 규슈전력 -->
                             <div class="exp-project">
-                                <h4>규슈 전력</h4>
+                                <h4>규슈전력 신 영업 시스템 (청구・회수)</h4>
                                 <p class="exp-period">2020.09 ~ 2020.12</p>
-                                <p class="exp-role">전력회사 신 영업 시스템 개발</p>
+                                <p class="exp-role">전력 요금 청구 및 회수 시스템 개발</p>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
-                                        <li>테스트 커버리지 100% 달성</li>
-                                        <li>바코드 생성 오류 0건</li>
-                                        <li>금융기관 연동 오류 90% 감소</li>
+                                        <li>테스트 커버리지 <strong>95%+</strong> 달성</li>
+                                        <li>바코드 생성 오류 발견 및 해결</li>
+                                        <li>금융기관 연동 비정상 종료 장애 대응</li>
                                     </ul>
                                 </div>
                                 <div class="tech-tags">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">Spring MVC</span>
+                                    <span class="tech-tag">Java 8</span>
+                                    <span class="tech-tag">Spring Boot</span>
                                     <span class="tech-tag">MyBatis</span>
                                     <span class="tech-tag">Oracle</span>
                                 </div>
                             </div>
 
-                            <!-- Yokogawa -->
+                            <!-- OA기기 렌탈 -->
                             <div class="exp-project">
-                                <h4>Yokogawa Rental Lease</h4>
+                                <h4>OA기기 렌탈 시스템 재구축</h4>
                                 <p class="exp-period">2020.03 ~ 2020.08</p>
-                                <p class="exp-role">OA기기 렌털 시스템 재구축</p>
+                                <p class="exp-role">렌탈 및 리스 시스템 재구축</p>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
                                     <span class="tech-tag">Spring Boot</span>
-                                    <span class="tech-tag">MyBatis</span>
-                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">SQL Server</span>
                                 </div>
                             </div>
 
+                            <!-- 육아 휴직 -->
+                            <div class="exp-project leave">
+                                <h4><i class="fas fa-baby"></i> 출산 및 육아 휴직</h4>
+                                <p class="exp-period">2019.01 ~ 2020.02</p>
+                            </div>
+
                             <!-- JASSO -->
-                            <div class="exp-project">
-                                <h4>JASSO (일본학생지원기구)</h4>
+                            <div class="exp-project featured">
+                                <h4>JASSO 일본 장학금 시스템 리뉴얼</h4>
                                 <p class="exp-period">2018.01 ~ 2018.12</p>
-                                <p class="exp-role">일본 장학금 시스템 재구축</p>
+                                <p class="exp-role">멀티 디바이스 대응 UI 리뉴얼 (화면 20개)</p>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
-                                        <li>사용자 접속 약 170% 증가</li>
-                                        <li>테스트 속도 약 200% 개선 (자동화)</li>
-                                        <li>멀티 디바이스 대응 완료</li>
+                                        <li>사용자 접속 <strong>170% 증가</strong></li>
+                                        <li>테스트 수행 시간 <strong>200% 개선</strong></li>
+                                        <li>Appium 기반 모바일 테스트 자동화 구축</li>
                                     </ul>
                                 </div>
                                 <div class="tech-tags">
@@ -345,30 +365,29 @@
                                 </div>
                             </div>
 
-                            <!-- Usami Koyu -->
+                            <!-- 정유 기업 -->
                             <div class="exp-project">
-                                <h4>Usami Koyu Corp</h4>
+                                <h4>정유 기업 신시스템 구축</h4>
                                 <p class="exp-period">2017.08 ~ 2017.12</p>
-                                <p class="exp-role">정유 기업 신 시스템 구축</p>
+                                <p class="exp-role">마스터 관리 시스템 설계/개발</p>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">Struts2</span>
-                                    <span class="tech-tag">MyBatis</span>
-                                    <span class="tech-tag">Oracle</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                </div>
+                            </div>
+
+                            <!-- 신용카드 데이터 이관 -->
+                            <div class="exp-project">
+                                <h4>차기 신용카드 시스템 데이터 이관</h4>
+                                <p class="exp-period">2017.04 ~ 2017.07</p>
+                                <p class="exp-role">CARD 결제 관련 데이터 이관 설계</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Systemwalker</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- 육아휴직 -->
-                <div class="timeline-item timeline-break">
-                    <div class="timeline-marker">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>출산 및 육아 휴직</h3>
-                        <span class="timeline-date">2019.01 ~ 2020.02</span>
                     </div>
                 </div>
 
@@ -380,89 +399,87 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>아시아정보시스템 (亜細亜情報システム)</h3>
-                            <a href="https://www.ais-info.co.jp/" target="_blank" class="company-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
                         <span class="timeline-date">2013.04 ~ 2015.09</span>
-                        <span class="timeline-position">Full-stack / Data Migration Developer</span>
+                        <span class="timeline-position">Full-stack & Data Engineer</span>
 
                         <div class="experience-details">
-                            <!-- 신일본제철 운송관리 -->
+                            <!-- 신일본제철 -->
                             <div class="exp-project">
                                 <h4>신일본제철 운송관리 시스템</h4>
                                 <p class="exp-period">2015.01 ~ 2015.09</p>
-                                <p class="exp-role">두 회사 합병에 따른 수송 및 가공 처리 시스템 개선</p>
-                                <div class="achievements">
-                                    <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
-                                    <ul>
-                                        <li>수송 및 가공 처리 기능 개선·유지보수</li>
-                                        <li>배포 후 장애 경험을 통해 테스트 중요성 체득</li>
-                                        <li>확장성과 모듈화 설계 역량 강화</li>
-                                    </ul>
-                                </div>
+                                <p class="exp-role">합병 대응 수송비 계산 시스템</p>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">JSP</span>
+                                    <span class="tech-tag">Struts2</span>
                                     <span class="tech-tag">Oracle</span>
-                                    <span class="tech-tag">물류 시스템</span>
                                 </div>
                             </div>
 
-                            <!-- Credit Saison ETL 2차 -->
-                            <div class="exp-project">
+                            <!-- Credit Saison 2차 -->
+                            <div class="exp-project featured">
                                 <h4>Credit Saison 데이터 통합 (2차 재투입)</h4>
-                                <p class="exp-period">2014.01 ~ 2014.09</p>
+                                <p class="exp-period">2014.04 ~ 2014.09</p>
                                 <p class="exp-role">신용카드 사용자 약 2,500만 명 데이터 마이그레이션</p>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
-                                        <li>1차 협업 성과를 인정받아 재참여</li>
-                                        <li>Oracle DBMS 재설계·구축으로 성능 개선</li>
+                                        <li><strong>2,500만 명</strong> 회원 데이터 마이그레이션 완료</li>
+                                        <li>정합성 이슈 <strong>0건</strong></li>
+                                        <li>1차 협업 성과를 인정받아 <strong>재투입 요청</strong></li>
                                     </ul>
                                 </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Informatica PowerCenter</span>
-                                    <span class="tech-tag">ETL</span>
                                     <span class="tech-tag">Oracle</span>
+                                    <span class="tech-tag">Teradata</span>
+                                    <span class="tech-tag">PL/SQL</span>
                                 </div>
                             </div>
 
-                            <!-- 금융기관 데이터 통합 -->
+                            <!-- 사내 시스템 -->
                             <div class="exp-project">
-                                <h4>금융기관 프로젝트 데이터 통합</h4>
-                                <p class="exp-period">2013.10 ~ 2013.12</p>
-                                <p class="exp-role">사내 두 팀의 이질적 서버 환경 데이터 마이그레이션</p>
-                                <div class="achievements">
-                                    <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
-                                    <ul>
-                                        <li>PL/SQL 기반 데이터 마이그레이션 수행</li>
-                                        <li>신입사원 대상 PL/SQL 교육 진행</li>
-                                    </ul>
+                                <h4>사내 업무 경력서 Web 관리 시스템</h4>
+                                <p class="exp-period">2014.01 ~ 2014.03</p>
+                                <p class="exp-role">환경 구축부터 기본 설계까지</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">JSP</span>
+                                    <span class="tech-tag">Struts2</span>
+                                    <span class="tech-tag">Hibernate</span>
                                 </div>
+                            </div>
+
+                            <!-- MUFG -->
+                            <div class="exp-project">
+                                <h4>MUFG 금융기관 데이터 통합</h4>
+                                <p class="exp-period">2013.10 ~ 2013.12</p>
+                                <p class="exp-role">PL/SQL 기반 마이그레이션</p>
                                 <div class="tech-tags">
                                     <span class="tech-tag">PL/SQL</span>
                                     <span class="tech-tag">Oracle</span>
-                                    <span class="tech-tag">Data Migration</span>
                                 </div>
                             </div>
 
-                            <!-- Credit Saison ETL 1차 -->
-                            <div class="exp-project">
+                            <!-- Credit Saison 1차 -->
+                            <div class="exp-project featured">
                                 <h4>Credit Saison 데이터 통합 (1차)</h4>
                                 <p class="exp-period">2013.04 ~ 2013.09</p>
                                 <p class="exp-role">신용카드 사용자 약 2,500만 명 데이터 마이그레이션</p>
                                 <div class="achievements">
                                     <h5><i class="fas fa-trophy"></i> 주요 성과</h5>
                                     <ul>
-                                        <li>지급 및 연체자 데이터 ETL 매핑 설계·이관</li>
-                                        <li>실제 유사 테스트 데이터로 마이그레이션 장애 0건</li>
-                                        <li>데이터 정합성 100% 달성</li>
+                                        <li>연체자 분류 로직 설계 및 ETL 매핑</li>
+                                        <li>마이그레이션 장애 <strong>0건</strong></li>
+                                        <li>데이터 정합성 <strong>100%</strong> 달성</li>
+                                        <li><strong>신뢰를 얻어 2차 재투입 요청</strong></li>
                                     </ul>
                                 </div>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Informatica PowerCenter</span>
-                                    <span class="tech-tag">ETL</span>
                                     <span class="tech-tag">Oracle</span>
+                                    <span class="tech-tag">Teradata</span>
                                 </div>
                             </div>
                         </div>
@@ -480,183 +497,166 @@
                 <span class="title-line"></span>
             </h2>
 
-            <!-- Core Competencies -->
-            <div class="competency-grid">
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3>전체 개발 사이클 수행</h3>
-                    <ul>
-                        <li>요구사항 분석부터 통합테스트까지</li>
-                        <li>단위테스트 500개 이상 작성</li>
-                        <li>통합테스트 수행 프로젝트 5개</li>
-                    </ul>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>ERP/EAI 시스템 통합</h3>
-                    <ul>
-                        <li>webMethods EAI (2.5년)</li>
-                        <li>SAP JCo/ABAP RFC (2.5년)</li>
-                        <li>인터페이스 50개 이상 구축</li>
-                    </ul>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3>테스트 주도 개발 (TDD)</h3>
-                    <ul>
-                        <li>테스트 커버리지 80~100%</li>
-                        <li>JUnit5, im-JavaEE Test</li>
-                        <li>안정성 중심 개발 프로세스</li>
-                    </ul>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-cubes"></i>
-                    </div>
-                    <h3>MSA 아키텍처</h3>
-                    <ul>
-                        <li>모놀리식 → MSA 전환</li>
-                        <li>RESTful API 설계</li>
-                        <li>독립 배포 시스템 구축</li>
-                    </ul>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>대용량 데이터 처리</h3>
-                    <ul>
-                        <li>2,500만 건 마이그레이션</li>
-                        <li>ETL 매핑 설계</li>
-                        <li>데이터 정합성 100%</li>
-                    </ul>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>다양한 산업 경험</h3>
-                    <ul>
-                        <li>금융, 항공, 전력, 제조</li>
-                        <li>11개 프로젝트, 9개 기업</li>
-                        <li>미션 크리티컬 시스템</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Tech Stack -->
-            <h3 class="subsection-title">Tech Stack</h3>
             <div class="skills-grid">
+                <!-- Backend -->
                 <div class="skill-category">
-                    <h4><i class="fas fa-server"></i> Backend</h4>
-                    <div class="skill-items">
+                    <div class="skill-category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                        <span class="skill-years">10년+</span>
+                    </div>
+                    <div class="skill-list">
                         <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Java (8, 11, 21)</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Spring Boot/MVC</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Spring Boot / MVC</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">MyBatis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Spring Data JPA</span>
+                                <span class="skill-level">Advanced</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">JUnit5</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">MyBatis</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JUnit5 / Mockito</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Database -->
                 <div class="skill-category">
-                    <h4><i class="fas fa-plug"></i> ERP/EAI</h4>
-                    <div class="skill-items">
+                    <div class="skill-category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database</h3>
+                        <span class="skill-years">대용량 처리</span>
+                    </div>
+                    <div class="skill-list">
                         <div class="skill-item">
-                            <span class="skill-name">webMethods EAI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Oracle</span>
+                                <span class="skill-level">Expert (10년+)</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">SAP JCo</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL / MariaDB</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">SAP RFC/BAPI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Informatica ETL</span>
+                                <span class="skill-level">Advanced</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">ABAP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">PL/SQL</span>
+                                <span class="skill-level">Advanced</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
                         </div>
                     </div>
                 </div>
 
+                <!-- ERP/EAI -->
                 <div class="skill-category">
-                    <h4><i class="fas fa-database"></i> Database</h4>
-                    <div class="skill-items">
+                    <div class="skill-category-header">
+                        <i class="fas fa-plug"></i>
+                        <h3>ERP / EAI</h3>
+                        <span class="skill-years">시스템 연동</span>
+                    </div>
+                    <div class="skill-list">
                         <div class="skill-item">
-                            <span class="skill-name">Oracle</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">webMethods EAI</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">MySQL/MariaDB</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">SAP JCo / RFC / BAPI</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">SQL/PL/SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">SAP ABAP</span>
+                                <span class="skill-level">Intermediate</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="60"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">RESTful API 설계</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
                         </div>
                     </div>
                 </div>
 
+                <!-- DevOps -->
                 <div class="skill-category">
-                    <h4><i class="fas fa-tools"></i> DevOps & Others</h4>
-                    <div class="skill-items">
+                    <div class="skill-category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>DevOps & Tools</h3>
+                        <span class="skill-years">협업 도구</span>
+                    </div>
+                    <div class="skill-list">
                         <div class="skill-item">
-                            <span class="skill-name">Git/SVN</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub / SVN</span>
+                                <span class="skill-level">Expert</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Linux</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Linux CentOS</span>
+                                <span class="skill-level">Advanced</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Jenkins</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">Learning</span>
                             </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="40"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Kubernetes</span>
+                                <span class="skill-level">CKAD 준비 중</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="35"></div></div>
                         </div>
                     </div>
                 </div>
@@ -672,12 +672,10 @@
                 <span class="title-line"></span>
             </h2>
 
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-content">
+            <div class="education-grid-3">
+                <div class="education-card-h">
+                    <div class="education-icon-h"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="education-content-h">
                         <h3>엔코아 아카데미</h3>
                         <span class="education-date">2021.09 ~ 2022.03</span>
                         <p>자율주행을 위한 IoT/Big Data/AI 융합 개발자 양성과정 수료</p>
@@ -689,11 +687,9 @@
                     </div>
                 </div>
 
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
+                <div class="education-card-h">
+                    <div class="education-icon-h"><i class="fas fa-university"></i></div>
+                    <div class="education-content-h">
                         <h3>경남대학교 | 컴퓨터공학과</h3>
                         <span class="education-date">2006.03 ~ 2013.02</span>
                         <p>학사 졸업</p>
@@ -705,11 +701,9 @@
                     </div>
                 </div>
 
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <div class="education-content">
+                <div class="education-card-h">
+                    <div class="education-icon-h"><i class="fas fa-language"></i></div>
+                    <div class="education-content-h">
                         <h3>国際テクニカルデザイン・自動車専門学校</h3>
                         <span class="education-date">2011.10 ~ 2012.09</span>
                         <p>일본어 학과 수료</p>
@@ -760,60 +754,44 @@
             <div class="philosophy-container">
                 <div class="philosophy-quote-box">
                     <i class="fas fa-quote-left"></i>
-                    <p>'설계부터 테스트까지, 책임지는 개발자'</p>
+                    <p>"2,500만 명의 데이터 앞에서 책임의 무게를 배웠고,<br>테스트 코드를 사수 삼아 혼자서도 품질을 지켰습니다"</p>
                     <i class="fas fa-quote-right"></i>
                 </div>
 
                 <div class="philosophy-intro">
-                    <p>저는 단순히 코드를 작성하는 개발자가 아니라, 문제를 분석하고, 최선의 해법을 설계하며, 테스트로 품질을 증명하는 개발자입니다.</p>
+                    <p>사수 없이 독학으로 10년을 성장했습니다. 코드 리뷰를 받을 수 없는 환경에서, 테스트 코드가 저의 검증 도구이자 문서였습니다.</p>
                 </div>
 
                 <div class="values-grid">
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-drafting-compass"></i>
-                        </div>
-                        <h4>설계의 중요성</h4>
-                        <p>좋은 설계가 좋은 코드를 만든다<br>요구사항을 기술로 구체화하는 것이 핵심</p>
+                        <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>안정성</h4>
+                        <p>대용량 서비스의 정합성과<br>무장애 운영</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h4>테스트의 가치</h4>
-                        <p>테스트는 신뢰의 증거다<br>커버리지 80~100%로 품질을 증명</p>
+                        <div class="value-icon"><i class="fas fa-vial"></i></div>
+                        <h4>품질 검증</h4>
+                        <p>테스트 커버리지 80~95%<br>코드로 증명</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4>책임감</h4>
-                        <p>설계부터 운영까지 끝까지 책임진다<br>내가 만든 시스템은 내가 지킨다</p>
+                        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>제안하는 개발</h4>
+                        <p>시키는 대로만 하지 않고<br>더 나은 방법 제안</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>협업</h4>
-                        <p>시스템을 연결하는 것은 사람을 연결하는 것<br>기술 용어를 쉽게 설명하고 소통한다</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <h4>지속적 개선</h4>
-                        <p>더 나은 방법을 끊임없이 고민한다<br>제약은 창의성의 어머니</p>
+                        <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                        <h4>신뢰</h4>
+                        <p>한 번 함께 일하면<br>다시 찾는 개발자</p>
                     </div>
                 </div>
 
                 <div class="philosophy-closing">
                     <div class="closing-quote">
                         <i class="fas fa-quote-left"></i>
-                        <span>"개발은 연결이다"</span>
+                        <span>"라온나날" ☀️</span>
                         <i class="fas fa-quote-right"></i>
                     </div>
-                    <p>시스템과 시스템을 연결하고, 부서와 부서를 연결하며, 데이터로 비즈니스 가치를 창출하는 것.</p>
-                    <p>10년간 금융, 항공, 제조 등 다양한 산업에서 미션 크리티컬 시스템을 구축하며 안정성과 품질의 가치를 체득했습니다.</p>
+                    <p>즐거운 날들을 보내며 성장한다</p>
                 </div>
             </div>
         </div>
@@ -827,43 +805,33 @@
                 <span class="title-line"></span>
             </h2>
 
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Phone</h4>
-                            <p>010-4359-0780</p>
-                        </div>
+            <div class="contact-grid-4">
+                <div class="contact-card-h">
+                    <div class="contact-icon-h"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text-h">
+                        <h4>PHONE</h4>
+                        <p>010-****-****</p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <a href="mailto:minya8703@gmail.com">minya8703@gmail.com</a>
-                        </div>
+                </div>
+                <div class="contact-card-h">
+                    <div class="contact-icon-h"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text-h">
+                        <h4>EMAIL</h4>
+                        <a href="mailto:minya8703@gmail.com">minya8703@gmail.com</a>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/minya8703" target="_blank">github.com/minya8703</a>
-                        </div>
+                </div>
+                <div class="contact-card-h">
+                    <div class="contact-icon-h"><i class="fab fa-github"></i></div>
+                    <div class="contact-text-h">
+                        <h4>GITHUB</h4>
+                        <a href="https://github.com/minya8703" target="_blank">github.com/minya8703</a>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-blog"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Blog</h4>
-                            <a href="https://difud1106.tistory.com/" target="_blank">difud1106.tistory.com</a>
-                        </div>
+                </div>
+                <div class="contact-card-h">
+                    <div class="contact-icon-h"><i class="fas fa-blog"></i></div>
+                    <div class="contact-text-h">
+                        <h4>BLOG</h4>
+                        <a href="https://difud1106.tistory.com/" target="_blank">difud1106.tistory.com</a>
                     </div>
                 </div>
             </div>
@@ -873,8 +841,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="update-info">Last Updated: 2025.11.23</p>
-            <p class="copyright">&copy; 2025 Min YaRyung. All Rights Reserved.</p>
+            <p class="update-info">Last Updated: 2026.02.03</p>
+            <p class="copyright">&copy; 2026 Min YaRyung. All Rights Reserved.</p>
         </div>
     </footer>
 
