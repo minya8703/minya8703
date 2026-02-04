@@ -1376,6 +1376,7 @@ img {
     visibility: hidden;
     transition: var(--transition);
     padding: 20px;
+    cursor: pointer;
 }
 
 .modal-overlay.active {
@@ -1393,6 +1394,7 @@ img {
     transform: translateY(30px);
     transition: var(--transition);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    cursor: default;
 }
 
 .modal-overlay.active .modal-container {

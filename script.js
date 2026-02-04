@@ -147,11 +147,10 @@ function closeModal(modalId) {
     }
 }
 
-// Close modal when clicking overlay
+// Close modal when clicking outside (on overlay)
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal-overlay')) {
-        e.target.classList.remove('active');
-        document.body.style.overflow = '';
+        closeModal(e.target.id);
     }
 });
 
