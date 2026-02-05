@@ -712,6 +712,11 @@ img {
     border-radius: var(--radius-md);
     border-left: 4px solid var(--border-color);
     transition: var(--transition);
+    margin-bottom: 28px;
+}
+
+.exp-project:last-child {
+    margin-bottom: 0;
 }
 
 .exp-project:hover {
@@ -1656,7 +1661,7 @@ img {
     font-size: 13px;
     color: var(--text-muted);
     margin-top: 8px;
-    line-height: 1.5;
+    line-height: 1.65;
 }
 
 /* Reference Links */
